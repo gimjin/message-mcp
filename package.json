@@ -4,6 +4,14 @@
   "version": "1.1.2",
   "license": "MIT",
   "author": "gimjin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gimjin/coffee-time.git"
+  },
+  "homepage": "https://github.com/gimjin/coffee-time",
+  "bugs": {
+    "url": "https://github.com/gimjin/coffee-time/issues"
+  },
   "type": "module",
   "bin": {
     "coffee-time": "./build/index.js"
