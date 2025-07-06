@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.1.0...coffee-time-v1.1.1) (2025-07-06)
+
+
+### Bug Fixes
+
+* add shebang to index files ([3c8d31a](https://github.com/gimjin/coffee-time/commit/3c8d31a777a6170ad900e199e5a2fb78b0490bae))
+
 ## [1.1.0](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.0.0...coffee-time-v1.1.0) (2025-07-06)
 
 
