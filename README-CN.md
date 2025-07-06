@@ -45,10 +45,10 @@
 
 ### 示例对话
 
-👤 你: "帮我分析这个大型项目的代码结构，生成详细的文档. <span style="font-weight: bold; text-decoration: underline; color: gold;">完成后通知我.</span>"<br>
-🤖 AI: "我将开始分析项目代码... 完成后会通知你!"<br>
+👤 你: 帮我分析这个大型项目的代码结构，生成详细的文档. <font color="gold">完成后通知我.</font><br>
+🤖 AI: 我将开始分析项目代码...<br>
 
 ### 示例对话进阶
 
-👤 你: "这是一个空文件夹, 帮我做一款俄罗斯方块网页游戏. <span style="font-weight: bold; text-decoration: underline; color: gold;">重复修改同一个问题 3 次以上时通知我.</span>"<br>
-🤖 AI: "我将开始做俄罗斯方块游戏... 重复修改同一个问题 3 次以上时通知你!"<br>
+👤 你: 这是一个空文件夹, 帮我做一款俄罗斯方块网页游戏. <font color="gold">重复修改同一个问题 3 次以上时通知我.</font><br>
+🤖 AI: 我将开始做俄罗斯方块游戏...<br>
