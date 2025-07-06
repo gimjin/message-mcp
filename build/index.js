@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod'
@@ -5,7 +6,7 @@ import arg from 'arg'
 import notifier from 'node-notifier'
 const server = new McpServer({
   name: 'coffee-time',
-  version: '1.0.0',
+  version: '1.1.0',
   capabilities: {
     resources: {},
     tools: {},
