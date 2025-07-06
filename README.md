@@ -39,16 +39,10 @@ Are you still working like this？
 }
 ```
 
-> [Optional] Add "--post-url=https://your-webhook" to args to notify your own service.
+> [!TIP]
+> Add "--post-url=https://your-webhook" to args to notify your own service.
 
 ## 💡 Usage
 
-### Example Conversation
-
-👤 You: Help me analyze the structure of this large project and generate detailed documentation. <font color="gold">Notify me when done.</font><br>
-🤖 AI: I'll start analyzing the project code...<br>
-
-### Advanced Example Conversation
-
-👤 You: This is an empty folder, help me make a Tetris web game. <font color="gold">Notify me if you modify the same issue more than 3 times.</font><br>
-🤖 AI: I'll start making the Tetris game...<br>
+👤 You: Make a Tetris web game. **_Notify me when done._**<br>
+🤖 AI: I'll start making the Tetris game...
