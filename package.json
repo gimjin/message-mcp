@@ -1,7 +1,7 @@
 {
   "name": "coffee-time",
   "description": "No more staring at the screen! Coffee Time is your AI assistant companion. Through the MCP service, it sends you **notifications and sound alerts** when AI tasks are completed, so you can truly experience a workflow where AI works, you enjoy your coffee.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "gimjin",
   "type": "module",
