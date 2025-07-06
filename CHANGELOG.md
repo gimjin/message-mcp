@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.1.2...coffee-time-v1.1.3) (2025-07-06)
+
+
+### Bug Fixes
+
+* add repository, homepage, and bugs fields to package.json ([#5](https://github.com/gimjin/coffee-time/issues/5)) ([17ec81c](https://github.com/gimjin/coffee-time/commit/17ec81c11cafc6cc7da080077b72bb13801225ef))
+
 ## [1.1.2](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.1.1...coffee-time-v1.1.2) (2025-07-06)
 
 
