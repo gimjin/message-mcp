@@ -9,7 +9,7 @@
   <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
 </div>
 
-## ✨ Why Coffee Time？
+## 🤔 Why Coffee Time？
 
 Are you still working like this？
 
