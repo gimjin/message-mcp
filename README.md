@@ -1,10 +1,13 @@
-# ☕ Coffee Time
-
-[中文文档](./README-CN.md)
-
-**Enjoy a cup of coffee while AI works for you**
-
-> **No more staring at the screen!** Coffee Time is your AI assistant companion. Through the MCP service, it sends you **notifications and sound alerts** when AI tasks are completed, so you can truly experience a workflow where "AI works, you enjoy your coffee."
+<div align="center">
+  <h1>☕ Coffee Time MCP Server</h1>
+  <p>
+    🌐 Available in:
+    <a href="README.zh.md">中文</a> |
+    <a href="README.ko.md">한국어</a> |
+    <a href="README.ja.md">日本語</a>
+  </p>
+  <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
+</div>
 
 ## ✨ Why Coffee Time？
 
@@ -18,15 +21,17 @@ Are you still working like this？
 
 ## ✨ Features
 
-- 🔔 **Instant Notifications**：Automatically pops up desktop notifications when AI tasks are done
-- 🎵 **Sound Alerts**：Audio reminders so you never miss any important progress
-- 🌐 **Webhook Support**：Send notifications to custom URL endpoints
+- 💬 **Instant Notifications**：Automatically pops up desktop notifications when AI tasks are done
+- 🔔 **Sound Alerts**：Audio reminders so you never miss any important progress
+- 🧩 **Webhook Support**：Send notifications to custom URL endpoints
 
 > Roadmap：iOS/Android network notification webhook in development
 
 ## 🚀 Quick Start
 
 ### MCP Client Configuration （Cursor, Claude Code, Copilot and more）
+
+#### MacOS / Linux
 
 ```json
 {
@@ -39,10 +44,29 @@ Are you still working like this？
 }
 ```
 
+#### Windows
+
+```json
+{
+  "mcpServers": {
+    "coffee-time": {
+      "command": "cmd",
+      "args": ["/c", "npx", "coffee-time"]
+    }
+  }
+}
+```
+
 > [!TIP]
 > Add "--post-url=https://your-webhook" to args to notify your own service.
 
-## 💡 Usage
+### 💡 Usage
 
 👤 You: Make a Tetris web game. **_Notify me when done._**<br>
 🤖 AI: I'll start making the Tetris game...
+
+## 📌 Requirements
+
+- macOS: >= 10.8 for native notifications.
+- Linux: notify-osd or libnotify-bin installed (Ubuntu should have this by default)
+- Windows: >= 8, or task bar balloons for Windows < 8.
