@@ -1,4 +1,4 @@
-name: Release Please
+name: ci
 
 on:
   push:
