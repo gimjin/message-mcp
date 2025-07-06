@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.1.1...coffee-time-v1.1.2) (2025-07-06)
+
+
+### Bug Fixes
+
+* edit multilingual README files, and update ci config ([#3](https://github.com/gimjin/coffee-time/issues/3)) ([5e7d1ad](https://github.com/gimjin/coffee-time/commit/5e7d1ad5d9ef8aef3e88725f2c3fc4e0d03b44ae))
+
 ## [1.1.1](https://github.com/gimjin/coffee-time/compare/coffee-time-v1.1.0...coffee-time-v1.1.1) (2025-07-06)
 
 
