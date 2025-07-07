@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.0...message-mcp-v1.2.1) (2025-07-07)
+
+
+### Bug Fixes
+
+* update file paths for snoretoast executables in documentation ([#10](https://github.com/gimjin/message-mcp/issues/10)) ([16294f4](https://github.com/gimjin/message-mcp/commit/16294f4dbd191851312e60ab8156172b03991629))
+
 ## [1.2.0](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.1.3...message-mcp-v1.2.0) (2025-07-07)
 
 
