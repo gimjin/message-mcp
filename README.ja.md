@@ -116,8 +116,8 @@ Webhook通知を利用したい場合は、webhook URLを追加してくださ�
 
 ```bash
 sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
-node_modules_path/snoretoast-x64.exe
-node_modules_path/snoretoast-x86.exe
+[node_modules_path]/snoretoast-x64.exe
+[node_modules_path]/snoretoast-x86.exe
 
-chmod +x node_modules_path/snoretoast-*.exe
+chmod +x [node_modules_path]/snoretoast-*.exe
 ```
