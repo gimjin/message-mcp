@@ -7,7 +7,15 @@
     <a href="README.ja.md">日本語</a>
   </p>
   <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
-  <img src="glama.ai/screenshot.png" width="700" height="350">
+  <a href="https://deepwiki.com/gimjin/message-mcp">
+    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
+  </a>
+  <a href="https://smithery.ai/server/@gimjin/message-mcp">
+    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
+  </a>
 </div>
 
 ## 🤔 Why Message MCP?
@@ -31,6 +39,8 @@ Are you still working like this?
 
 👤 You: Make a Tetris web game. **_Notify me when done._**<br>
 🤖 AI: I'll start making the Tetris game...
+
+[![Install_MCP-Cursor](https://img.shields.io/badge/Install_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Install_MCP-VS_Code](https://img.shields.io/badge/Install_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Install_MCP-VS_Code_Insiders](https://img.shields.io/badge/Install_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
 #### MacOS / Linux
 
