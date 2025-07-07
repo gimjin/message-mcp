@@ -1,7 +1,7 @@
 {
   "name": "message-mcp",
   "description": "Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "MIT",
   "author": "gimjin",
   "repository": {

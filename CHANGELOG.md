@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.2...message-mcp-v1.2.3) (2025-07-07)
+
+
+### Bug Fixes
+
+* improve notification handling and error reporting in notify tool ([9df5bf9](https://github.com/gimjin/message-mcp/commit/9df5bf983dab756eda6ca921873bdc1d4d5c4c69))
+
 ## [1.2.2](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.1...message-mcp-v1.2.2) (2025-07-07)
 
 
