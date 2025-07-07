@@ -7,6 +7,7 @@
     <a href="README.ja.md">日本語</a>
   </p>
   <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
+  <img src="glama.ai/screenshot.png" width="700" height="350">
 </div>
 
 ## 🤔 Why Message MCP?

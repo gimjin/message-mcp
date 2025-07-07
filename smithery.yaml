@@ -1,0 +1,26 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => {
+      const args = [];
+      if (config.webhookUrl) args.push(`--webhook-url=${config.webhookUrl}`);
+      if (config.smtpUrl) args.push(`--smtp-url=${config.smtpUrl}`);
+      return { command: 'node', args: ['build/index.js', ...args] };
+    }
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      webhookUrl:
+        type: string
+        description: Webhook URL to send notifications to
+      smtpUrl:
+        type: string
+        description: SMTP URL for sending email notifications using RFC2396 format
+  exampleConfig:
+    webhookUrl: https://example.com/notify
+    smtpUrl: smtp://user:pass@smtp.example.com:587
