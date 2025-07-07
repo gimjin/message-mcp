@@ -78,10 +78,9 @@ If you want to use email notifications, add the SMTP URL configuration parameter
 **Common SMTP URL Examples:**
 
 - **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ Mail**: `smtp://user:pass@smtp.qq.com:587`
+- **QQ Mail**: `smtps://user:pass@smtp.qq.com:465`
 
 #### Webhook Notification Setup (Optional)
 
@@ -106,3 +105,19 @@ If you want to use webhook notifications, add the webhook URL configuration para
 - macOS: Native notifications require >= 10.8
 - Linux: notify-osd or libnotify-bin installed (Ubuntu includes by default)
 - Windows: >= 8, or taskbar balloon notifications for Windows < 8
+
+## ⚡ Troubleshooting
+
+#### Windows System Notifications Disabled
+
+Settings > Notifications & actions > Get notifications from apps and other senders → Enable
+
+#### WSL2 Environment Missing OS Notifications
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+node_modules_path/snoretoast-x64.exe
+node_modules_path/snoretoast-x86.exe
+
+chmod +x node_modules_path/snoretoast-*.exe
+```

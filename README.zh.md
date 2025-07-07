@@ -77,11 +77,10 @@
 
 **常见 SMTP URL 配置示例：**
 
-- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Gmail**: `smtp://user@:pass@smtp.gmail.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ邮箱**: `smtp://user:pass@smtp.qq.com:587`
+- **QQ邮箱**: `smtps://user:pass@smtp.qq.com:465`
 
 #### Webhook 通知配置（可选）
 
@@ -106,3 +105,19 @@
 - macOS: 原生通知需要 >= 10.8 版本
 - Linux: 需要安装 notify-osd 或 libnotify-bin（Ubuntu 默认包含）
 - Windows: >= 8 版本，或 Windows < 8 的任务栏气球提示
+
+## ⚡ 解决异常问题
+
+#### Windows 系统通知未启用
+
+设置 > 通知和操作 > 获取来自应用和其他发送者的通知 → 启用
+
+#### WSL2 环境缺少操作系统通知
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+node_modules_path/snoretoast-x64.exe
+node_modules_path/snoretoast-x86.exe
+
+chmod +x node_modules_path/snoretoast-*.exe
+```

@@ -78,10 +78,9 @@
 **주요 SMTP URL 예시:**
 
 - **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ메일**: `smtp://user:pass@smtp.qq.com:587`
+- **QQ메일**: `smtps://user:pass@smtp.qq.com:465`
 
 #### 웹훅 알림 설정(선택)
 
@@ -106,3 +105,19 @@
 - macOS: 네이티브 알림은 10.8 이상 필요
 - Linux: notify-osd 또는 libnotify-bin 설치 필요(Ubuntu는 기본 포함)
 - Windows: 8 이상, 또는 8 미만은 작업 표시줄 풍선 알림
+
+## ⚡ 문제 해결
+
+#### Windows 시스템 알림이 비활성화됨
+
+설정 > 알림 및 작업 > 앱 및 기타 발신자로부터 알림 받기 → 사용
+
+#### WSL2 환경에서 OS 알림 누락
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+node_modules_path/snoretoast-x64.exe
+node_modules_path/snoretoast-x86.exe
+
+chmod +x node_modules_path/snoretoast-*.exe
+```

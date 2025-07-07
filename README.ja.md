@@ -78,10 +78,9 @@
 **主なSMTP URL例：**
 
 - **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQメール**: `smtp://user:pass@smtp.qq.com:587`
+- **QQメール**: `smtps://user:pass@smtp.qq.com:465`
 
 #### Webhook通知設定（オプション）
 
@@ -106,3 +105,19 @@ Webhook通知を利用したい場合は、webhook URLを追加してくださ�
 - macOS: ネイティブ通知にはバージョン10.8以上が必要
 - Linux: notify-osdまたはlibnotify-binがインストールされている必要があります（Ubuntuはデフォルトで含む）
 - Windows: 8以上、または8未満はタスクバルーン通知
+
+## ⚡ トラブルシューティング
+
+#### Windows システム通知が無効
+
+設定 > 通知とアクション > アプリやその他の送信者からの通知を受け取る → 有効化
+
+#### WSL2 環境でOS通知が不足
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+node_modules_path/snoretoast-x64.exe
+node_modules_path/snoretoast-x86.exe
+
+chmod +x node_modules_path/snoretoast-*.exe
+```
