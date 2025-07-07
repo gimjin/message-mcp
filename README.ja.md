@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>☕ Coffee Time MCP Server</h1>
+  <h1>💬 Message MCP</h1>
   <p>
     🌐 利用可能な言語:
     <a href="README.md">English</a> |
@@ -36,9 +36,9 @@
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "npx",
-      "args": ["coffee-time"]
+      "args": ["message-mcp"]
     }
   }
 }
@@ -49,9 +49,9 @@
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "coffee-time"]
+      "args": ["/c", "npx", "message-mcp"]
     }
   }
 }
