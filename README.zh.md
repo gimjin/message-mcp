@@ -106,3 +106,19 @@
 - macOS: 原生通知需要 >= 10.8 版本
 - Linux: 需要安装 notify-osd 或 libnotify-bin（Ubuntu 默认包含）
 - Windows: >= 8 版本，或 Windows < 8 的任务栏气球提示
+
+## ⚡ 解决异常问题
+
+#### Windows 系统通知未启用
+
+设置 > 通知和操作 > 获取来自应用和其他发送者的通知 → 启用
+
+#### WSL2 环境缺少操作系统通知
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+node_modules_path/snoretoast-x64.exe
+node_modules_path/snoretoast-x86.exe
+
+chmod +x node_modules_path/snoretoast-*.exe
+```
