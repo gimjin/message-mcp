@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.1...message-mcp-v1.2.2) (2025-07-07)
+
+
+### Bug Fixes
+
+* update input schema to use optional instead of nullish for notify tool ([#12](https://github.com/gimjin/message-mcp/issues/12)) ([18021f7](https://github.com/gimjin/message-mcp/commit/18021f78847c9a11c4a6197c3c9329c55e59dc80))
+
 ## [1.2.1](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.0...message-mcp-v1.2.1) (2025-07-07)
 
 
