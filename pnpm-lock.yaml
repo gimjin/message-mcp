@@ -16,6 +16,9 @@ importers:
       node-notifier:
         specifier: ^10.0.1
         version: 10.0.1
+      nodemailer:
+        specifier: ^7.0.4
+        version: 7.0.4
       zod:
         specifier: ^3.25.74
         version: 3.25.74
@@ -35,6 +38,9 @@ importers:
       '@types/node-notifier':
         specifier: ^8.0.5
         version: 8.0.5
+      '@types/nodemailer':
+        specifier: ^6.4.17
+        version: 6.4.17
       eslint:
         specifier: ^9.25.1
         version: 9.30.1(jiti@2.4.2)
@@ -372,6 +378,12 @@ packages:
     resolution:
       {
         integrity: sha512-OP+We5WV8Xnbuvw0zC2m4qfB/BJvjyCwtNjhHdJxV1639SGSKrLmJkc3fMnp2Qy8nJyHp8RO6umxELN/dS1/EA==,
+      }
+
+  '@types/nodemailer@6.4.17':
+    resolution:
+      {
+        integrity: sha512-I9CCaIp6DTldEg7vyUTZi8+9Vo0hi1/T8gv3C89yk1rSAAzoKQ8H8ki/jBYJSFoH/BisgLP8tkZMlQ91CIquww==,
       }
 
   '@typescript-eslint/eslint-plugin@8.35.1':
@@ -1737,6 +1749,13 @@ packages:
         integrity: sha512-YX7TSyDukOZ0g+gmzjB6abKu+hTGvO8+8+gIFDsRCU2t8fLV/P2unmt+LGFaIa4y64aX98Qksa97rgz4vMNeLQ==,
       }
 
+  nodemailer@7.0.4:
+    resolution:
+      {
+        integrity: sha512-9O00Vh89/Ld2EcVCqJ/etd7u20UhME0f/NToPfArwPEe1Don1zy4mAIz6ariRr7mJ2RDxtaDzN0WJVdVXPtZaw==,
+      }
+    engines: { node: '>=6.0.0' }
+
   object-assign@4.1.1:
     resolution:
       {
@@ -2657,6 +2676,10 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/nodemailer@6.4.17':
+    dependencies:
+      '@types/node': 20.19.4
+
   '@typescript-eslint/eslint-plugin@8.35.1(@typescript-eslint/parser@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
@@ -3456,6 +3479,8 @@ snapshots:
       shellwords: 0.1.1
       uuid: 8.3.2
       which: 2.0.2
+
+  nodemailer@7.0.4: {}
 
   object-assign@4.1.1: {}
 

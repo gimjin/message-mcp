@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>☕ Coffee Time MCP Server</h1>
+  <h1>💬 Message MCP</h1>
   <p>
     🌐 利用可能な言語:
     <a href="README.md">English</a> |
@@ -9,36 +9,36 @@
   <h3>リアルタイムプッシュ通知とアラート音により、画面を見つめる必要がありません。AIが動作している間、コーヒーを飲みながらリラックスしてください。</h3>
 </div>
 
-## 🤔 なぜCoffee Time？
+## 🤔 なぜ Message MCP なのか？
 
-まだこのように作業していますか？
+まだこんな働き方をしていますか？
 
-- 👀 プログレスバーを見つめながらAIがコードを生成するのを待つ
-- 🔄 ChatGPTが返答を完了したかどうかを確認するために絶えずウィンドウを切り替える
-- ⏳ Cursor、Copilot、Claude Codeなどが実行中の間、席を離れることを恐れる
+- 👀 進捗バーを見つめてAIがコードを生成するのを待つ
+- 🔄 ChatGPTの返信が終わったか何度もウィンドウを切り替えて確認する
+- ⏳ Cursor、Copilot、Claude Codeなどの実行中は席を離れられない
 
-**Coffee Timeがこの問題を解決します！**
+**Message MCP がこの問題を解決します！**
 
-## ✨ 機能
+## ✨ 機能一覧
 
-- 💬 **即座の通知**：AIタスクが完了すると自動的にデスクトップ通知がポップアップ
-- 🔔 **音声アラート**：重要な進捗を見逃さないための音声リマインダー
-- 🧩 **Webhookサポート**：カスタムURLエンドポイントへの通知送信
+- 💬 **即時通知**: AIタスク完了時にデスクトップ通知を自動表示
+- 🔔 **サウンド通知**: 音で進捗をお知らせ、重要な進展を見逃さない
+- 📧 **メール通知**: SMTP経由でメール通知を送信可能
+- 🧩 **Webhook対応**: カスタムURLエンドポイントへ通知送信
 
-> ロードマップ：iOS/Android ネットワーク通知 webhook を開発中
+## 💡 使い方
 
-## 🚀 クイックスタート
-
-### MCPクライアント設定（Cursor、Claude Code、Copilotなど）
+👤 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
+🤖 AI: テトリスゲームの作成を開始します...
 
 #### MacOS / Linux
 
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "npx",
-      "args": ["coffee-time"]
+      "args": ["message-mcp"]
     }
   }
 }
@@ -49,24 +49,60 @@
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "coffee-time"]
+      "args": ["/c", "npx", "message-mcp"]
     }
   }
 }
 ```
 
-> [!TIP]
-> 独自のサービスに通知するには、argsに"--post-url=https://your-webhook"を追加してください。
+#### メール通知設定（オプション）
 
-## 💡 使用方法
+メール通知を利用したい場合は、`args` 配列にSMTP URLを追加してください：
 
-👤 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
-🤖 AI: テトリスゲームの作成を開始します...
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+      ]
+    }
+  }
+}
+```
+
+**主なSMTP URL例：**
+
+- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
+- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
+- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
+- **QQメール**: `smtp://user:pass@smtp.qq.com:587`
+
+#### Webhook通知設定（オプション）
+
+Webhook通知を利用したい場合は、webhook URLを追加してください：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--webhook-url=https://your-webhook-endpoint.com/notify"
+      ]
+    }
+  }
+}
+```
 
 ## 📌 システム要件
 
-- macOS: ネイティブ通知のために >= 10.8 が必要
-- Linux: notify-osd または libnotify-bin がインストールされている必要があります（Ubuntuではデフォルトで含まれています）
-- Windows: >= 8、または Windows < 8 の場合はタスクバーバルーン
+- macOS: ネイティブ通知にはバージョン10.8以上が必要
+- Linux: notify-osdまたはlibnotify-binがインストールされている必要があります（Ubuntuはデフォルトで含む）
+- Windows: 8以上、または8未満はタスクバルーン通知

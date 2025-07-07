@@ -4,6 +4,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod'
 import arg from 'arg'
 import notifier from 'node-notifier'
+import nodemailer from 'nodemailer'
 
 const server = new McpServer({
   name: '#name',
@@ -16,14 +17,34 @@ const server = new McpServer({
 
 const args = arg(
   {
-    '--post-url': String,
+    '--webhook-url': String,
+    '--smtp-url': String,
   },
   {
     permissive: true,
     argv: process.argv.slice(2),
   },
 )
-const postUrl = args['--post-url']
+const webhookUrl = args['--webhook-url']
+const smtpUrl = args['--smtp-url']
+
+// Parse SMTP URL
+function parseSmtpUrl(url: string) {
+  try {
+    const parsed = new URL(url)
+    const protocol = parsed.protocol.slice(0, -1) // Remove trailing ':'
+    const secure = protocol === 'smtps' || parsed.port === '465'
+    const host = parsed.hostname
+    const port = parsed.port || (secure ? '465' : '587')
+    const user = decodeURIComponent(parsed.username)
+    const pass = decodeURIComponent(parsed.password)
+
+    return { host, port: parseInt(port), secure, user, pass }
+  } catch (error) {
+    console.error('Invalid SMTP URL format:', error)
+    return null
+  }
+}
 
 server.registerTool(
   'notify',
@@ -36,16 +57,21 @@ server.registerTool(
     },
   },
   async ({ title, message }) => {
+    const notifyTitle = title || 'message-mcp'
+    const notifyMessage = message || 'Please check results.'
+    const notifications = []
+
+    // Desktop notification
     notifier.notify({
-      title: title || 'coffee-time',
-      message: message || 'Please check results.',
+      title: notifyTitle,
+      message: notifyMessage,
       sound: true,
     })
 
-    let postUrlSuccess = true
-    if (postUrl) {
+    // Webhook notification
+    if (webhookUrl) {
       try {
-        const response = await fetch(postUrl, {
+        const response = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -56,19 +82,54 @@ server.registerTool(
         if (!response.ok) {
           throw new Error(`Failed to post notification: ${response.statusText}`)
         }
+        notifications.push('Webhook notification sent successfully!')
       } catch (error) {
-        postUrlSuccess = false
+        notifications.push('Failed to send webhook notification.')
         console.error('Error posting notification:', error)
       }
     }
+
+    // Email notification
+    if (smtpUrl) {
+      const smtpConfig = parseSmtpUrl(smtpUrl)
+      if (smtpConfig) {
+        try {
+          const transporter = nodemailer.createTransport({
+            host: smtpConfig.host,
+            port: smtpConfig.port,
+            secure: smtpConfig.secure,
+            auth: {
+              user: smtpConfig.user,
+              pass: smtpConfig.pass,
+            },
+          })
+
+          const mailOptions = {
+            from: smtpConfig.user,
+            to: smtpConfig.user,
+            subject: notifyTitle,
+            text: `${notifyMessage}\n\nhttps://github.com/gimjin/message-mcp`,
+          }
+
+          await transporter.sendMail(mailOptions)
+          notifications.push('Email notification sent successfully!')
+        } catch (error) {
+          notifications.push('Failed to send email notification.')
+          console.error('Error sending email:', error)
+        }
+      } else {
+        notifications.push('Invalid SMTP URL format.')
+      }
+    }
+
+    // Always include desktop notification status
+    notifications.unshift('Desktop notification sent successfully!')
 
     return {
       content: [
         {
           type: 'text',
-          text: postUrlSuccess
-            ? 'Notification sent successfully!'
-            : 'Failed to send the post URL notification.',
+          text: notifications.join(' '),
         },
       ],
     }
@@ -78,8 +139,13 @@ server.registerTool(
 async function main() {
   const transport = new StdioServerTransport()
   await server.connect(transport)
-  console.error('coffee-time MCP Server running on stdio')
-  console.error(`${postUrl ? `Post URL: ${postUrl}` : 'No post URL provided'}`)
+  console.error('message-mcp MCP Server running on stdio')
+  console.error(
+    `${webhookUrl ? `Webhook URL: ${webhookUrl}` : 'No webhook URL provided'}`,
+  )
+  console.error(
+    `${smtpUrl ? `SMTP URL: ${smtpUrl}` : 'No SMTP configuration provided'}`,
+  )
 }
 
 main().catch((error) => {

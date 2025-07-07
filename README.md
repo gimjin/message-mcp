@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>☕ Coffee Time MCP Server</h1>
+  <h1>💬 Message MCP</h1>
   <p>
     🌐 Available in:
     <a href="README.zh.md">中文</a> |
@@ -9,36 +9,36 @@
   <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
 </div>
 
-## 🤔 Why Coffee Time？
+## 🤔 Why Message MCP?
 
-Are you still working like this？
+Are you still working like this?
 
 - 👀 Staring at the progress bar waiting for AI to generate code
 - 🔄 Constantly switching windows to check if ChatGPT has finished replying
 - ⏳ Afraid to leave your seat while Cursor, Copilot, Claude Code and more are running
 
-**Coffee Time solves this problem！**
+**Message MCP solves this problem!**
 
 ## ✨ Features
 
-- 💬 **Instant Notifications**：Automatically pops up desktop notifications when AI tasks are done
-- 🔔 **Sound Alerts**：Audio reminders so you never miss any important progress
-- 🧩 **Webhook Support**：Send notifications to custom URL endpoints
+- 💬 **Instant Notifications**: Automatically pops up desktop notifications when AI tasks are done
+- 🔔 **Sound Alerts**: Audio reminders so you never miss any important progress
+- 📧 **Email Notifications**: Support for sending email notifications via SMTP
+- 🧩 **Webhook Support**: Send notifications to custom URL endpoints
 
-> Roadmap：iOS/Android network notification webhook in development
+## 💡 Usage
 
-## 🚀 Quick Start
-
-### MCP Client Configuration （Cursor, Claude Code, Copilot and more）
+👤 You: Make a Tetris web game. **_Notify me when done._**<br>
+🤖 AI: I'll start making the Tetris game...
 
 #### MacOS / Linux
 
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "npx",
-      "args": ["coffee-time"]
+      "args": ["message-mcp"]
     }
   }
 }
@@ -49,24 +49,60 @@ Are you still working like this？
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "coffee-time"]
+      "args": ["/c", "npx", "message-mcp"]
     }
   }
 }
 ```
 
-> [!TIP]
-> Add "--post-url=https://your-webhook" to args to notify your own service.
+#### Email Notification Setup (Optional)
 
-### 💡 Usage
+If you want to use email notifications, add the SMTP URL configuration parameter to the `args` array:
 
-👤 You: Make a Tetris web game. **_Notify me when done._**<br>
-🤖 AI: I'll start making the Tetris game...
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+      ]
+    }
+  }
+}
+```
 
-## 📌 Requirements
+**Common SMTP URL Examples:**
 
-- macOS: >= 10.8 for native notifications.
-- Linux: notify-osd or libnotify-bin installed (Ubuntu should have this by default)
-- Windows: >= 8, or task bar balloons for Windows < 8.
+- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
+- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
+- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
+- **QQ Mail**: `smtp://user:pass@smtp.qq.com:587`
+
+#### Webhook Notification Setup (Optional)
+
+If you want to use webhook notifications, add the webhook URL configuration parameter:
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--webhook-url=https://your-webhook-endpoint.com/notify"
+      ]
+    }
+  }
+}
+```
+
+## 📌 System Requirements
+
+- macOS: Native notifications require >= 10.8
+- Linux: notify-osd or libnotify-bin installed (Ubuntu includes by default)
+- Windows: >= 8, or taskbar balloon notifications for Windows < 8

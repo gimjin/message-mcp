@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>☕ Coffee Time MCP Server</h1>
+  <h1>💬 Message MCP</h1>
   <p>
     🌐 可用语言:
     <a href="README.md">English</a> |
@@ -9,7 +9,7 @@
   <h3>实时推送通知与提示音，让你无需紧盯屏幕。AI 工作时，你可以安心享受一杯咖啡。</h3>
 </div>
 
-## 🤔 为什么需要 Coffee Time？
+## 🤔 为什么需要 Message MCP？
 
 还在这样工作吗？
 
@@ -17,28 +17,28 @@
 - 🔄 不断切回窗口看 ChatGPT 是否完成回复
 - ⏳ 在 Cursor, Copilot, Claude Code and more 运行时不敢离开座位
 
-**Coffee Time 解决这个问题！**
+**Message MCP 解决这个问题！**
 
 ## ✨ 功能特性
 
 - 💬 **即时通知**: AI 完成任务时自动弹出桌面通知
 - 🔔 **提示音**: 配合声音提醒，不错过任何重要进展
+- 📧 **邮件通知**: 支持通过 SMTP 发送邮件通知
 - 🧩 **Webhook 支持**: 可发送通知到自定义 URL 端点
 
-> 路线图: 正在开发 iOS/Android 网络通知 webhook
+## 💡 使用方法
 
-## 🚀 快速开始
-
-### MCP 客户端配置 (Cursor, Claude Code, Copilot and more)
+👤 你: 做一款俄罗斯方块网页游戏, **_完成后通知我._**<br>
+🤖 AI: 我将开始做俄罗斯方块游戏...
 
 #### MacOS / Linux
 
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "npx",
-      "args": ["coffee-time"]
+      "args": ["message-mcp"]
     }
   }
 }
@@ -49,21 +49,57 @@
 ```json
 {
   "mcpServers": {
-    "coffee-time": {
+    "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "coffee-time"]
+      "args": ["/c", "npx", "message-mcp"]
     }
   }
 }
 ```
 
-> [!TIP]
-> args 添加 "--post-url=https://your-webhook" 通知你的服务.
+#### 邮件通知配置（可选）
 
-## 💡 使用方法
+如果您想使用邮件通知功能，请在 `args` 数组中添加 SMTP URL 配置参数：
 
-👤 你: 做一款俄罗斯方块网页游戏, **_完成后通知我._**<br>
-🤖 AI: 我将开始做俄罗斯方块游戏...
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+      ]
+    }
+  }
+}
+```
+
+**常见 SMTP URL 配置示例：**
+
+- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
+- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
+- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
+- **QQ邮箱**: `smtp://user:pass@smtp.qq.com:587`
+
+#### Webhook 通知配置（可选）
+
+如果您想使用 Webhook 通知功能，请添加 webhook URL 配置参数：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": [
+        "message-mcp",
+        "--webhook-url=https://your-webhook-endpoint.com/notify"
+      ]
+    }
+  }
+}
+```
 
 ## 📌 系统要求
 

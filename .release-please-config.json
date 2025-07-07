@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "coffee-time"
+      "package-name": "message-mcp"
     }
   }
 }
