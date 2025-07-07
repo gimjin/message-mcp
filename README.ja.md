@@ -38,7 +38,7 @@
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp"]
+      "args": ["message-mcp@latest"]
     }
   }
 }
@@ -51,7 +51,7 @@
   "mcpServers": {
     "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "message-mcp"]
+      "args": ["/c", "npx", "message-mcp@latest"]
     }
   }
 }
@@ -67,7 +67,7 @@
     "message-mcp": {
       "command": "npx",
       "args": [
-        "message-mcp",
+        "message-mcp@latest",
         "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
       ]
     }
@@ -92,7 +92,7 @@ Webhook通知を利用したい場合は、webhook URLを追加してくださ�
     "message-mcp": {
       "command": "npx",
       "args": [
-        "message-mcp",
+        "message-mcp@latest",
         "--webhook-url=https://your-webhook-endpoint.com/notify"
       ]
     }
