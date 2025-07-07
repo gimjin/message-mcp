@@ -127,8 +127,8 @@ Settings > Notifications & actions > Get notifications from apps and other sende
 
 ```bash
 sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
-[node_modules_path]/snoretoast-x64.exe
-[node_modules_path]/snoretoast-x86.exe
+/path/to/.../node_modules/snoretoast-x64.exe
+/path/to/.../node_modules/snoretoast-x86.exe
 
-chmod +x [node_modules_path]/snoretoast-*.exe
+chmod +x /path/to/.../node_modules/snoretoast-*.exe
 ```

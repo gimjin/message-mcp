@@ -59,14 +59,33 @@ server.registerTool(
   async ({ title, message }) => {
     const notifyTitle = title || 'Message MCP'
     const notifyMessage = message || 'Task completed, please review.'
-    const notifications = []
+    const results = []
 
     // Desktop notification
-    notifier.notify({
-      title: notifyTitle,
-      message: notifyMessage,
-      sound: true,
-    })
+    try {
+      await new Promise((resolve, reject) => {
+        notifier.notify(
+          {
+            title: notifyTitle,
+            message: notifyMessage,
+            sound: true,
+          },
+          (error) => {
+            if (error) {
+              reject(error)
+            } else {
+              resolve(true)
+            }
+          },
+        )
+      })
+      results.push('Desktop notification sent successfully!')
+    } catch (error) {
+      results.push(
+        `Desktop notification failed: ${error instanceof Error ? error.message : String(error)}`,
+      )
+      console.error('Error sending desktop notification:', error)
+    }
 
     // Webhook notification
     if (webhookUrl) {
@@ -76,15 +95,17 @@ server.registerTool(
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ title, message }),
+          body: JSON.stringify({ title: notifyTitle, message: notifyMessage }),
         })
 
         if (!response.ok) {
-          throw new Error(`Failed to post notification: ${response.statusText}`)
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
         }
-        notifications.push('Webhook notification sent successfully!')
+        results.push('Webhook notification sent successfully!')
       } catch (error) {
-        notifications.push('Failed to send webhook notification.')
+        results.push(
+          `Webhook notification failed: ${error instanceof Error ? error.message : String(error)}`,
+        )
         console.error('Error posting notification:', error)
       }
     }
@@ -112,26 +133,23 @@ server.registerTool(
           }
 
           await transporter.sendMail(mailOptions)
-          notifications.push('Email notification sent successfully!')
+          results.push('Email notification sent successfully!')
         } catch (error) {
-          notifications.push('Failed to send email notification.')
+          results.push(
+            `Email notification failed: ${error instanceof Error ? error.message : String(error)}`,
+          )
           console.error('Error sending email:', error)
         }
       } else {
-        notifications.push('Invalid SMTP URL format.')
+        results.push('Email notification failed: Invalid SMTP URL format')
       }
     }
 
-    // Always include desktop notification status
-    notifications.unshift('Desktop notification sent successfully!')
-
     return {
-      content: [
-        {
-          type: 'text',
-          text: notifications.join(' '),
-        },
-      ],
+      content: results.map((result) => ({
+        type: 'text',
+        text: result,
+      })),
     }
   },
 )
