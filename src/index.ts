@@ -52,8 +52,8 @@ server.registerTool(
     title: 'Notify Me',
     description: 'Notify me upon successful completion of task execution',
     inputSchema: {
-      title: z.string().nullish().describe('The title of the notify'),
-      message: z.string().nullish().describe('The message to notify'),
+      title: z.string().optional().describe('The title of the notify'),
+      message: z.string().optional().describe('The message to notify'),
     },
   },
   async ({ title, message }) => {

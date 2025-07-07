@@ -38,7 +38,7 @@ Are you still working like this?
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp"]
+      "args": ["message-mcp@latest"]
     }
   }
 }
@@ -51,7 +51,7 @@ Are you still working like this?
   "mcpServers": {
     "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "message-mcp"]
+      "args": ["/c", "npx", "message-mcp@latest"]
     }
   }
 }
@@ -67,7 +67,7 @@ If you want to use email notifications, add the SMTP URL configuration parameter
     "message-mcp": {
       "command": "npx",
       "args": [
-        "message-mcp",
+        "message-mcp@latest",
         "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
       ]
     }
@@ -92,7 +92,7 @@ If you want to use webhook notifications, add the webhook URL configuration para
     "message-mcp": {
       "command": "npx",
       "args": [
-        "message-mcp",
+        "message-mcp@latest",
         "--webhook-url=https://your-webhook-endpoint.com/notify"
       ]
     }
