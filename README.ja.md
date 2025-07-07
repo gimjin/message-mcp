@@ -78,10 +78,9 @@
 **主なSMTP URL例：**
 
 - **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQメール**: `smtp://user:pass@smtp.qq.com:587`
+- **QQメール**: `smtps://user:pass@smtp.qq.com:465`
 
 #### Webhook通知設定（オプション）
 

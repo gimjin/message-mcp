@@ -78,10 +78,9 @@
 **주요 SMTP URL 예시:**
 
 - **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Gmail (SSL)**: `smtps://user:pass@smtp.gmail.com:465`
-- **Outlook**: `smtp://user:pass@smtp.office365.com:587`
+- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ메일**: `smtp://user:pass@smtp.qq.com:587`
+- **QQ메일**: `smtps://user:pass@smtp.qq.com:465`
 
 #### 웹훅 알림 설정(선택)
 

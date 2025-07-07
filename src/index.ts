@@ -35,11 +35,11 @@ function parseSmtpUrl(url: string) {
     const protocol = parsed.protocol.slice(0, -1) // Remove trailing ':'
     const secure = protocol === 'smtps' || parsed.port === '465'
     const host = parsed.hostname
-    const port = parsed.port || (secure ? '465' : '587')
+    const port = parseInt(parsed.port)
     const user = decodeURIComponent(parsed.username)
     const pass = decodeURIComponent(parsed.password)
 
-    return { host, port: parseInt(port), secure, user, pass }
+    return { host, port, secure, user, pass }
   } catch (error) {
     console.error('Invalid SMTP URL format:', error)
     return null
@@ -52,13 +52,13 @@ server.registerTool(
     title: 'Notify Me',
     description: 'Notify me upon successful completion of task execution',
     inputSchema: {
-      title: z.string().describe('The title of the notify'),
-      message: z.string().describe('The message to notify'),
+      title: z.string().nullish().describe('The title of the notify'),
+      message: z.string().nullish().describe('The message to notify'),
     },
   },
   async ({ title, message }) => {
-    const notifyTitle = title || 'message-mcp'
-    const notifyMessage = message || 'Please check results.'
+    const notifyTitle = title || 'Message MCP'
+    const notifyMessage = message || 'Task completed, please review.'
     const notifications = []
 
     // Desktop notification
