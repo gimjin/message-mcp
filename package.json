@@ -34,6 +34,7 @@
     "@eslint/js": "^9.30.1",
     "@types/node": "20.x",
     "@types/node-notifier": "^8.0.5",
+    "@types/nodemailer": "^6.4.17",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
@@ -47,6 +48,7 @@
     "@modelcontextprotocol/sdk": "^1.15.0",
     "arg": "^5.0.2",
     "node-notifier": "^10.0.1",
+    "nodemailer": "^7.0.4",
     "zod": "^3.25.74"
   }
 }
