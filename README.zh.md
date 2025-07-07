@@ -7,6 +7,15 @@
     <a href="README.jp.md">日本語</a>
   </p>
   <h3>实时推送通知与提示音，让你无需紧盯屏幕。AI 工作时，你可以安心享受一杯咖啡。</h3>
+  <a href="https://deepwiki.com/gimjin/message-mcp">
+    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
+  </a>
+  <a href="https://smithery.ai/server/@gimjin/message-mcp">
+    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
+  </a>
 </div>
 
 ## 🤔 为什么需要 Message MCP？
@@ -30,6 +39,8 @@
 
 👤 你: 做一款俄罗斯方块网页游戏, **_完成后通知我._**<br>
 🤖 AI: 我将开始做俄罗斯方块游戏...
+
+[![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
 #### MacOS / Linux
 

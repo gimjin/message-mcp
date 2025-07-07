@@ -7,6 +7,15 @@
     <a href="README.ko.md">한국어</a>
   </p>
   <h3>リアルタイムプッシュ通知とアラート音により、画面を見つめる必要がありません。AIが動作している間、コーヒーを飲みながらリラックスしてください。</h3>
+  <a href="https://deepwiki.com/gimjin/message-mcp">
+    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
+  </a>
+  <a href="https://smithery.ai/server/@gimjin/message-mcp">
+    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
+  </a>
 </div>
 
 ## 🤔 なぜ Message MCP なのか？
@@ -30,6 +39,8 @@
 
 👤 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
 🤖 AI: テトリスゲームの作成を開始します...
+
+[![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
 #### MacOS / Linux
 
