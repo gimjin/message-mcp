@@ -26,17 +26,17 @@
 
 ## ✨ 機能のハイライト
 
-- 🖥️ システムメッセージ：タスク完了時にデスクトップ通知が即座にポップアップ、インターフェースを繰り返し確認する必要なし
-- 📧 メール通知：SMTP対応で、デバイス間でタスクの進捗をタイムリーに受信
-- 🎧 音声効果：システム音効果と組み合わせたリマインダーで、重要なマイルストーンを聞き逃さない
-- 🔗 Webhook統合：タスクステータスを簡単にAPIや自動化ワークフローにプッシュ
+- 🖥️ **システムメッセージ**：タスク完了時にデスクトップ通知が即座にポップアップ、インターフェースを繰り返し確認する必要なし
+- 📧 **メール通知**：SMTP対応で、デバイス間でタスクの進捗をタイムリーに受信
+- 🎧 **音声効果**：システム音効果と組み合わせたリマインダーで、重要なマイルストーンを聞き逃さない
+- 🔗 **Webhook統合**：タスクステータスを簡単にAPIや自動化ワークフローにプッシュ
 
 ## 💡 使い方
 
 [![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-**🧑 あなた**：テトリスのWebゲームを作って。**_タスク完了後に通知してください_**。  
-**🤖 AI**：テトリスゲームの作成を開始します...
+🧑 **ユーザー**：テトリスのWebゲームを作って。**_タスク完了後に通知してください_**。  
+🤖 **AI**：テトリスゲームの作成を開始します...
 
 > [!tip]
 > `Cursor 設定 → Rules` に **_「タスク完了後に通知してください」_** を追加して、繰り返しの指示とお別れしましょう。

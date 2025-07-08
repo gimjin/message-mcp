@@ -26,17 +26,17 @@
 
 ## ✨ 기능 하이라이트
 
-- 🖥️ 시스템 메시지: 작업 완료 시 즉시 데스크톱 알림이 팝업되어 인터페이스를 반복적으로 확인할 필요 없음
-- 📧 이메일 알림: SMTP 지원으로 기기 간 작업 진행 상황을 적시에 수신
-- 🎧 음향 효과: 시스템 음향 효과와 결합된 리마인더로 중요한 마일스톤을 놓치지 않음
-- 🔗 Webhook 통합: 작업 상태를 API나 자동화 워크플로우에 쉽게 푸시
+- 🖥️ **시스템 메시지**: 작업 완료 시 즉시 데스크톱 알림이 팝업되어 인터페이스를 반복적으로 확인할 필요 없음
+- 📧 **이메일 알림**: SMTP 지원으로 기기 간 작업 진행 상황을 적시에 수신
+- 🎧 **음향 효과**: 시스템 음향 효과와 결합된 리마인더로 중요한 마일스톤을 놓치지 않음
+- 🔗 **Webhook 통합**: 작업 상태를 API나 자동화 워크플로우에 쉽게 푸시
 
 ## 💡 사용법
 
 [![인스톨_MCP-Cursor](https://img.shields.io/badge/인스톨_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![인스톨_MCP-VS_Code](https://img.shields.io/badge/인스톨_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![인스톨_MCP-VS_Code_Insiders](https://img.shields.io/badge/인스톨_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-**🧑 사용자**: 테트리스 웹 게임을 만들어 주세요. **_작업 완료 후 알려주세요_**.  
-**🤖 AI**: 테트리스 게임을 만들기 시작하겠습니다...
+🧑 **사용자**: 테트리스 웹 게임을 만들어 주세요. **_작업 완료 후 알려주세요_**.  
+🤖 **AI**: 테트리스 게임을 만들기 시작하겠습니다...
 
 > [!tip]
 > `Cursor 설정 → Rules` 에 **_"작업 완료 후 알려주세요"_** 를 추가하여 반복적인 지시와 작별하세요.

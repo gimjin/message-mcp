@@ -26,17 +26,17 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 
 ## ✨ Feature Highlights
 
-- 🖥️ System Messages: Desktop notifications pop up immediately when tasks are completed, no need to repeatedly check the interface
-- 📧 Email Alerts: SMTP support for timely cross-device task progress notifications
-- 🎧 Audio Cues: Combined with system sound effects reminders, never miss important milestones
-- 🔗 Webhook Integration: Easily push task status to your API or automation workflows
+- 🖥️ **System Messages**: Desktop notifications pop up immediately when tasks are completed, no need to repeatedly check the interface
+- 📧 **Email Alerts**: SMTP support for timely cross-device task progress notifications
+- 🎧 **Audio Cues**: Combined with system sound effects reminders, never miss important milestones
+- 🔗 **Webhook Integration**: Easily push task status to your API or automation workflows
 
 ## 💡 Usage
 
 [![Install_MCP-Cursor](https://img.shields.io/badge/Install_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Install_MCP-VS_Code](https://img.shields.io/badge/Install_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Install_MCP-VS_Code_Insiders](https://img.shields.io/badge/Install_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-**🧑 You** Make a Tetris web game. **_Notify me when the task is complete_**.  
-**🤖 AI**: I'll start making the Tetris game...
+🧑 **User**: Make a Tetris web game. **_Notify me when the task is complete_**.  
+🤖 **AI**: I'll start making the Tetris game...
 
 > [!tip]
 > Add **_"Notify me when the task is complete"_** to `Cursor Settings → Rules` to say goodbye to repetitive instructions.

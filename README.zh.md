@@ -26,17 +26,17 @@
 
 ## ✨ 功能亮点
 
-- 🖥️ 系统消息：任务完成即刻弹出桌面通知，无需反复查看界面
-- 📧 邮件提醒：支持 SMTP，跨设备及时收到任务进展
-- 🎧 提示音效：结合系统音效提醒，重要节点不漏听
-- 🔗 Webhook 集成：轻松将任务状态推送到你的 API 或自动化流程中
+- 🖥️ **系统消息**：任务完成即刻弹出桌面通知，无需反复查看界面
+- 📧 **邮件提醒**：支持 SMTP，跨设备及时收到任务进展
+- 🎧 **提示音效**：结合系统音效提醒，重要节点不漏听
+- 🔗 **Webhook 集成**：轻松将任务状态推送到你的 API 或自动化流程中
 
 ## 💡 使用方法
 
 [![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-**🧑 你**：做一款俄罗斯方块网页游戏, **_完成任务后通知我_**。  
-**🤖 AI**：我将开始做俄罗斯方块游戏...
+🧑 **用户**：做一款俄罗斯方块网页游戏, **_完成任务后通知我_**。  
+🤖 **AI**：我将开始做俄罗斯方块游戏...
 
 > [!tip]
 > `Cursor 设置 → Rules` 添加 **_"完成任务后通知我"_** 告别重复指令。
