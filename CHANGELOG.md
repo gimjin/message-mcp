@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.3...message-mcp-v1.2.4) (2025-07-08)
+
+
+### Bug Fixes
+
+* update notification tool description and input schema for clarity ([7b573c4](https://github.com/gimjin/message-mcp/commit/7b573c47f8eb4e589f4d6a68d9546adb6e1c1211))
+
 ## [1.2.3](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.2...message-mcp-v1.2.3) (2025-07-07)
 
 
