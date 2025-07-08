@@ -17,16 +17,16 @@ const server = new McpServer({
 
 const args = arg(
   {
-    '--webhook-url': String,
     '--smtp-url': String,
+    '--webhook-url': String,
   },
   {
     permissive: true,
     argv: process.argv.slice(2),
   },
 )
-const webhookUrl = args['--webhook-url']
 const smtpUrl = args['--smtp-url']
+const webhookUrl = args['--webhook-url']
 
 // Parse SMTP URL
 function parseSmtpUrl(url: string) {
@@ -51,20 +51,16 @@ server.registerTool(
   {
     title: 'Send Message Notification',
     description:
-      'Send notifications and messages through multiple channels (desktop, webhook, email). Use this tool to notify users about any important information, progress updates, task completions, alerts, or any other communication needs.',
+      'Send notifications and messages through multiple channels (desktop, email, webhook). Use this tool to notify users about any important information, progress updates, task completions, alerts, or any other communication needs.',
     inputSchema: {
-      title: z
-        .string()
-        .optional()
-        .describe('Title or subject of the notification message'),
       message: z
         .string()
         .optional()
         .describe('The main content of the notification message'),
     },
   },
-  async ({ title, message }) => {
-    const notifyTitle = title || 'Message MCP'
+  async ({ message }) => {
+    const notifyTitle = 'Message MCP'
     const notifyMessage = message || 'Task completed, please review.'
     const results = []
 
@@ -92,29 +88,6 @@ server.registerTool(
         `Desktop notification failed: ${error instanceof Error ? error.message : String(error)}`,
       )
       console.error('Error sending desktop notification:', error)
-    }
-
-    // Webhook notification
-    if (webhookUrl) {
-      try {
-        const response = await fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ title: notifyTitle, message: notifyMessage }),
-        })
-
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
-        }
-        results.push('Webhook notification sent successfully!')
-      } catch (error) {
-        results.push(
-          `Webhook notification failed: ${error instanceof Error ? error.message : String(error)}`,
-        )
-        console.error('Error posting notification:', error)
-      }
     }
 
     // Email notification
@@ -152,6 +125,29 @@ server.registerTool(
       }
     }
 
+    // Webhook notification
+    if (webhookUrl) {
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ title: notifyTitle, message: notifyMessage }),
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+        }
+        results.push('Webhook notification sent successfully!')
+      } catch (error) {
+        results.push(
+          `Webhook notification failed: ${error instanceof Error ? error.message : String(error)}`,
+        )
+        console.error('Error posting notification:', error)
+      }
+    }
+
     return {
       content: results.map((result) => ({
         type: 'text',
@@ -164,13 +160,11 @@ server.registerTool(
 async function main() {
   const transport = new StdioServerTransport()
   await server.connect(transport)
-  console.error('message-mcp MCP Server running on stdio')
+  console.error(`${smtpUrl ? `SMTP URL: ${smtpUrl}` : 'No SMTP URL provided'}`)
   console.error(
     `${webhookUrl ? `Webhook URL: ${webhookUrl}` : 'No webhook URL provided'}`,
   )
-  console.error(
-    `${smtpUrl ? `SMTP URL: ${smtpUrl}` : 'No SMTP configuration provided'}`,
-  )
+  console.error('message-mcp MCP Server running on stdio')
 }
 
 main().catch((error) => {

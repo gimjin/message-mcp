@@ -18,29 +18,25 @@
   </a>
 </div>
 
-## 🤔 为什么需要 Message MCP？
+## 🤔 你还在这样「监工式」用 AI 吗？
 
-还在这样工作吗？
+像个不放心的老板，盯着 AI 输出一行行跳动，明明可以去处理别的事，却偏偏一刻都离不开屏幕。
 
-- 👀 盯着进度条等 AI 生成代码
-- 🔄 不断切回窗口看 ChatGPT 是否完成回复
-- ⏳ 在 Cursor, Copilot, Claude Code and more 运行时不敢离开座位
+**Message MCP 让你彻底解放注意力！**
 
-**Message MCP 解决这个问题！**
+## ✨ 功能亮点
 
-## ✨ 功能特性
-
-- 💬 **即时通知**: AI 完成任务时自动弹出桌面通知
-- 🔔 **提示音**: 配合声音提醒，不错过任何重要进展
-- 📧 **邮件通知**: 支持通过 SMTP 发送邮件通知
-- 🧩 **Webhook 支持**: 可发送通知到自定义 URL 端点
+- 🖥️ 系统消息：任务完成即刻弹出桌面通知，无需反复查看界面
+- 📧 邮件提醒：支持 SMTP，跨设备及时收到任务进展
+- 🎧 提示音效：结合系统音效提醒，重要节点不漏听
+- 🔗 Webhook 集成：轻松将任务状态推送到你的 API 或自动化流程中
 
 ## 💡 使用方法
 
 [![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 你: 做一款俄罗斯方块网页游戏, **_完成任务后通知我_**<br>
-🤖 AI: 我将开始做俄罗斯方块游戏...
+**🧑 你**：做一款俄罗斯方块网页游戏, **_完成任务后通知我_**。  
+**🤖 AI**：我将开始做俄罗斯方块游戏...
 
 > [!tip]
 > `Cursor 设置 → Rules` 添加 **_"完成任务后通知我"_** 告别重复指令。

@@ -18,29 +18,25 @@
   </a>
 </div>
 
-## 🤔 なぜ Message MCP なのか？
+## 🤔 まだこんな「監視式」でAIを使っていますか？
 
-まだこんな働き方をしていますか？
+心配な上司のように、AIの出力を一行一行見つめて、明らかに他のことを処理できるのに、頑固に画面から一瞬も離れられない。
 
-- 👀 進捗バーを見つめてAIがコードを生成するのを待つ
-- 🔄 ChatGPTの返信が終わったか何度もウィンドウを切り替えて確認する
-- ⏳ Cursor、Copilot、Claude Codeなどの実行中は席を離れられない
+**Message MCPで完全に注意力を解放しましょう！**
 
-**Message MCP がこの問題を解決します！**
+## ✨ 機能のハイライト
 
-## ✨ 機能一覧
-
-- 💬 **即時通知**: AIタスク完了時にデスクトップ通知を自動表示
-- 🔔 **サウンド通知**: 音で進捗をお知らせ、重要な進展を見逃さない
-- 📧 **メール通知**: SMTP経由でメール通知を送信可能
-- 🧩 **Webhook対応**: カスタムURLエンドポイントへ通知送信
+- 🖥️ システムメッセージ：タスク完了時にデスクトップ通知が即座にポップアップ、インターフェースを繰り返し確認する必要なし
+- 📧 メール通知：SMTP対応で、デバイス間でタスクの進捗をタイムリーに受信
+- 🎧 音声効果：システム音効果と組み合わせたリマインダーで、重要なマイルストーンを聞き逃さない
+- 🔗 Webhook統合：タスクステータスを簡単にAPIや自動化ワークフローにプッシュ
 
 ## 💡 使い方
 
 [![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 あなた: テトリスのWebゲームを作って。**_タスク完了後に通知してください_**<br>
-🤖 AI: テトリスゲームの作成を開始します...
+**🧑 あなた**：テトリスのWebゲームを作って。**_タスク完了後に通知してください_**。  
+**🤖 AI**：テトリスゲームの作成を開始します...
 
 > [!tip]
 > `Cursor 設定 → Rules` に **_「タスク完了後に通知してください」_** を追加して、繰り返しの指示とお別れしましょう。
