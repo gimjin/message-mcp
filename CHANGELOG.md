@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.4...message-mcp-v1.2.5) (2025-07-08)
+
+
+### Bug Fixes
+
+* reorder webhook URL argument parsing and enhance notification handling ([270f61e](https://github.com/gimjin/message-mcp/commit/270f61e9c174341e5c0015472ff6e996498ad846))
+
 ## [1.2.4](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.3...message-mcp-v1.2.4) (2025-07-08)
 
 
