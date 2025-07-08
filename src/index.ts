@@ -49,11 +49,18 @@ function parseSmtpUrl(url: string) {
 server.registerTool(
   'notify',
   {
-    title: 'Notify Me',
-    description: 'Notify me upon successful completion of task execution',
+    title: 'Send Message Notification',
+    description:
+      'Send notifications and messages through multiple channels (desktop, webhook, email). Use this tool to notify users about any important information, progress updates, task completions, alerts, or any other communication needs.',
     inputSchema: {
-      title: z.string().optional().describe('The title of the notify'),
-      message: z.string().optional().describe('The message to notify'),
+      title: z
+        .string()
+        .optional()
+        .describe('Title or subject of the notification message'),
+      message: z
+        .string()
+        .optional()
+        .describe('The main content of the notification message'),
     },
   },
   async ({ title, message }) => {

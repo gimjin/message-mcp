@@ -39,7 +39,7 @@
 
 [![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
+🧑 あなた: テトリスのWebゲームを作って。**_タスク完了後に通知してください_**<br>
 🤖 AI: テトリスゲームの作成を開始します...
 
 > [!tip]
@@ -119,6 +119,7 @@ Webhook通知を利用したい場合は、webhook URLを追加してくださ�
 
 ## 📌 システム要件
 
+- Node.js: 18以降
 - macOS: ネイティブ通知にはバージョン10.8以上が必要
 - Linux: notify-osdまたはlibnotify-binがインストールされている必要があります（Ubuntuはデフォルトで含む）
 - Windows: 8以上、または8未満はタスクバルーン通知

@@ -39,7 +39,7 @@
 
 [![인스톨_MCP-Cursor](https://img.shields.io/badge/인스톨_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![인스톨_MCP-VS_Code](https://img.shields.io/badge/인스톨_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![인스톨_MCP-VS_Code_Insiders](https://img.shields.io/badge/인스톨_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 사용자: 테트리스 웹 게임을 만들어 주세요. **_완료되면 알려주세요._**<br>
+🧑 사용자: 테트리스 웹 게임을 만들어 주세요. **_작업 완료 후 알려주세요_**<br>
 🤖 AI: 테트리스 게임을 만들기 시작하겠습니다...
 
 > [!tip]
@@ -119,6 +119,7 @@
 
 ## 📌 시스템 요구사항
 
+- Node.js: 18 이상
 - macOS: 네이티브 알림은 10.8 이상 필요
 - Linux: notify-osd 또는 libnotify-bin 설치 필요(Ubuntu는 기본 포함)
 - Windows: 8 이상, 또는 8 미만은 작업 표시줄 풍선 알림
