@@ -37,14 +37,16 @@
 
 ## 💡 使い方
 
-👤 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
+[![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
+
+🧑 あなた: テトリスのWebゲームを作って。**_完了したら通知してください。_**<br>
 🤖 AI: テトリスゲームの作成を開始します...
 
 > [!tip]
-> `Cursor 設定 → Rules` に **_"タスク完了後に通知してください"_** を追加して、繰り返しの指示とお別れしましょう。
-> **_「複雑な作業処理後教えてください」_** を追加すると、AIは複雑なタスクのみをお知らせし、簡単なタスクでは一切邪魔しません。
+> `Cursor 設定 → Rules` に **_「タスク完了後に通知してください」_** を追加して、繰り返しの指示とお別れしましょう。
+> または **_「複雑なタスク完了後にお知らせください」_** を追加すると、AIは複雑なタスクのみをお知らせし、簡単なタスクでは一切邪魔しません。
 
-[![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
+### 手動インストール
 
 #### MacOS / Linux
 

@@ -37,14 +37,16 @@
 
 ## 💡 사용법
 
-👤 사용자: 테트리스 웹 게임을 만들어 주세요. **_완료되면 알려주세요._**<br>
+[![인스톨_MCP-Cursor](https://img.shields.io/badge/인스톨_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![인스톨_MCP-VS_Code](https://img.shields.io/badge/인스톨_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![인스톨_MCP-VS_Code_Insiders](https://img.shields.io/badge/인스톨_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
+
+🧑 사용자: 테트리스 웹 게임을 만들어 주세요. **_완료되면 알려주세요._**<br>
 🤖 AI: 테트리스 게임을 만들기 시작하겠습니다...
 
 > [!tip]
-> `Cursor 설정 → Rules` 에 **_"작업 완료 시 알려주세요"_** 를 추가하여 반복적인 지시와 작별하세요.
-> **_"복잡한 작업 처리 후 알려주세요"_** 를 추가하면, AI는 복잡한 작업에 대해서만 알려주고 간단한 작업은 방해하지 않습니다.
+> `Cursor 설정 → Rules` 에 **_"작업 완료 후 알려주세요"_** 를 추가하여 반복적인 지시와 작별하세요.
+> 또는 **_"복잡한 작업 완료 후 알려주세요"_** 를 추가하면, AI는 복잡한 작업에 대해서만 알려주고 간단한 작업은 방해하지 않습니다.
 
-[![인스톨_MCP-Cursor](https://img.shields.io/badge/인스톨_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![인스톨_MCP-VS_Code](https://img.shields.io/badge/인스톨_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![인스톨_MCP-VS_Code_Insiders](https://img.shields.io/badge/인스톨_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
+### 수동 설치
 
 #### MacOS / Linux
 
