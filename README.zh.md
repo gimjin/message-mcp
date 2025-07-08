@@ -40,6 +40,10 @@
 👤 你: 做一款俄罗斯方块网页游戏, **_完成后通知我._**<br>
 🤖 AI: 我将开始做俄罗斯方块游戏...
 
+> [!tip]
+> 在 Cursor 的 [User Rules](https://docs.cursor.com/context/rules#user-rules) 添加 **_任务完成后通知我_** 告别重复指令。
+> 设置 **_处理完复杂任务后通知我_**，AI 仅对复杂任务提醒，简单任务零打扰。
+
 [![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
 #### MacOS / Linux
