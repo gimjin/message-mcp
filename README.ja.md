@@ -1,7 +1,7 @@
 <div align="center">
   <h1>💬 Message MCP</h1>
   <p>
-    🌐 利用可能な言語:
+    🌐 利用可能な言語：
     <a href="README.md">English</a> |
     <a href="README.zh.md">中文</a> |
     <a href="README.ko.md">한국어</a>
@@ -92,10 +92,10 @@
 
 **主なSMTP URL例：**
 
-- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
-- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQメール**: `smtps://user:pass@smtp.qq.com:465`
+- **Gmail**：`smtp://user:pass@smtp.gmail.com:587`
+- **Outlook**：`smtp://user:pass@smtp-mail.outlook.com:587`
+- **Yahoo**：`smtp://user:pass@smtp.mail.yahoo.com:587`
+- **QQメール**：`smtps://user:pass@smtp.qq.com:465`
 
 #### API通知設定（オプション）
 

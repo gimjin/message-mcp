@@ -37,7 +37,7 @@
 
 [![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 **用户**：做一款俄罗斯方块网页游戏, **_完成任务后通知我_**。  
+🧑 **用户**：做一款俄罗斯方块网页游戏，**_完成任务后通知我_**。  
 🤖 **AI**：我将开始做俄罗斯方块游戏...
 
 > [!tip]
@@ -114,10 +114,10 @@
 
 ## 📌 系统要求
 
-- Node.js: 18 或更高
-- macOS: 原生通知需要 >= 10.8 版本
-- Linux: 需要安装 notify-osd 或 libnotify-bin（Ubuntu 默认包含）
-- Windows: >= 8 版本，或 Windows < 8 的任务栏气球提示
+- Node.js：18 或更高
+- macOS：原生通知需要 >= 10.8 版本
+- Linux：需要安装 notify-osd 或 libnotify-bin（Ubuntu 默认包含）
+- Windows：>= 8 版本，或 Windows < 8 的任务栏气球提示
 
 ## ⚡ 解决异常问题
 
