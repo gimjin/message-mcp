@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.9](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.8...message-mcp-v1.2.9) (2025-07-09)
+
+
+### Bug Fixes
+
+* update API URL in documentation and example configuration ([f214bce](https://github.com/gimjin/message-mcp/commit/f214bce06c2273f71ca3185ee30bcc66c28f1160))
+
 ## [1.2.8](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.7...message-mcp-v1.2.8) (2025-07-09)
 
 
