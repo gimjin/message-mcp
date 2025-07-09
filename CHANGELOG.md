@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.7](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.6...message-mcp-v1.2.7) (2025-07-09)
+
+
+### Bug Fixes
+
+* update keywords in package.json for better discoverability ([87a52a9](https://github.com/gimjin/message-mcp/commit/87a52a9e7bc4584d6728c00dd9284d3e4eabec13))
+
 ## [1.2.6](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.5...message-mcp-v1.2.6) (2025-07-09)
 
 
