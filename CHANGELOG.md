@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.5...message-mcp-v1.2.6) (2025-07-09)
+
+
+### Bug Fixes
+
+* update notification handling to use API instead of webhook ([71f887c](https://github.com/gimjin/message-mcp/commit/71f887cbbbe301746e1c3f32d6eb3153e4f5bd57))
+
 ## [1.2.5](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.4...message-mcp-v1.2.5) (2025-07-08)
 
 
