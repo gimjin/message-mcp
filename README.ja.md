@@ -6,12 +6,21 @@
     <a href="README.zh.md">中文</a> |
     <a href="README.ko.md">한국어</a>
   </p>
-  <h3>リアルタイムプッシュ通知とアラート音により、画面を見つめる必要がありません。AIが動作している間、コーヒーを飲みながらリラックスしてください。</h3>
+  <h3>デスクトップ通知、メール、APIプッシュにより、AIタスクの待機ストレスを軽減し、心地よく一杯のコーヒーを楽しめます。</h3>
+  <a href="#">
+    <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
+  </a>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
+  </a>
+  <a href="https://www.npmjs.com/package/message-mcp">
+    <img src="https://img.shields.io/npm/v/message-mcp" alt="NPM Version">
   </a>
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
@@ -23,13 +32,6 @@
 心配な上司のように、AIの出力を一行一行見つめて、明らかに他のことを処理できるのに、頑固に画面から一瞬も離れられない。
 
 **Message MCPで完全に注意力を解放しましょう！**
-
-## ✨ 機能のハイライト
-
-- 🖥️ **システムメッセージ**：タスク完了時にデスクトップ通知が即座にポップアップ、インターフェースを繰り返し確認する必要なし
-- 📧 **メール通知**：SMTP対応で、デバイス間でタスクの進捗をタイムリーに受信
-- 🎧 **音声効果**：システム音効果と組み合わせたリマインダーで、重要なマイルストーンを聞き逃さない
-- 🔗 **Webhook統合**：タスクステータスを簡単にAPIや自動化ワークフローにプッシュ
 
 ## 💡 使い方
 
@@ -81,7 +83,7 @@
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
       ]
     }
   }
@@ -95,9 +97,9 @@
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQメール**: `smtps://user:pass@smtp.qq.com:465`
 
-#### Webhook通知設定（オプション）
+#### API通知設定（オプション）
 
-Webhook通知を利用したい場合は、webhook URLを追加してください：
+API通知を利用したい場合は、API URLを追加してください：
 
 ```json
 {
@@ -106,7 +108,7 @@ Webhook通知を利用したい場合は、webhook URLを追加してくださ�
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--webhook-url=https://your-webhook-endpoint.com/notify"
+        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
       ]
     }
   }

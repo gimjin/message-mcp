@@ -7,7 +7,7 @@ startCommand:
     |-
     (config) => {
       const args = [];
-      if (config.webhookUrl) args.push(`--webhook-url=${config.webhookUrl}`);
+      if (config.apiUrl) args.push(`--api-url=${config.apiUrl}`);
       if (config.smtpUrl) args.push(`--smtp-url=${config.smtpUrl}`);
       return { command: 'node', args: ['build/index.js', ...args] };
     }
@@ -15,12 +15,12 @@ startCommand:
     # JSON Schema defining the configuration options for the MCP.
     type: object
     properties:
-      webhookUrl:
+      apiUrl:
         type: string
-        description: Webhook URL to send notifications to
+        description: API URL to send notifications to
       smtpUrl:
         type: string
         description: SMTP URL for sending email notifications using RFC2396 format
   exampleConfig:
-    webhookUrl: https://example.com/notify
-    smtpUrl: smtp://user:pass@smtp.example.com:587
+    apiUrl: https://jsonplaceholder.typicode.com/todos/1
+    smtpUrl: smtp://user@gmail.com:pass@smtp.gmail.com:587

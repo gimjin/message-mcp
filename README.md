@@ -6,12 +6,21 @@
     <a href="README.ko.md">한국어</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.</h3>
+  <h3>Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.</h3>
+  <a href="#">
+    <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
+  </a>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
+  </a>
+  <a href="https://www.npmjs.com/package/message-mcp">
+    <img src="https://img.shields.io/npm/v/message-mcp" alt="NPM Version">
   </a>
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
@@ -23,13 +32,6 @@
 Like a worried boss, staring at AI output line by line, clearly able to handle other tasks, but stubbornly unable to leave the screen for a moment.
 
 **Message MCP lets you completely free your attention!**
-
-## ✨ Feature Highlights
-
-- 🖥️ **System Messages**: Desktop notifications pop up immediately when tasks are completed, no need to repeatedly check the interface
-- 📧 **Email Alerts**: SMTP support for timely cross-device task progress notifications
-- 🎧 **Audio Cues**: Combined with system sound effects reminders, never miss important milestones
-- 🔗 **Webhook Integration**: Easily push task status to your API or automation workflows
 
 ## 💡 Usage
 
@@ -81,7 +83,7 @@ If you want to use email notifications, add the SMTP URL configuration parameter
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
       ]
     }
   }
@@ -95,9 +97,9 @@ If you want to use email notifications, add the SMTP URL configuration parameter
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQ Mail**: `smtps://user:pass@smtp.qq.com:465`
 
-#### Webhook Notification Setup (Optional)
+#### API Notification Setup (Optional)
 
-If you want to use webhook notifications, add the webhook URL configuration parameter:
+If you want to use API notifications, add the API URL configuration parameter:
 
 ```json
 {
@@ -106,7 +108,7 @@ If you want to use webhook notifications, add the webhook URL configuration para
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--webhook-url=https://your-webhook-endpoint.com/notify"
+        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
       ]
     }
   }

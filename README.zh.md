@@ -6,12 +6,21 @@
     <a href="README.ko.md">한국어</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>实时推送通知与提示音，让你无需紧盯屏幕。AI 工作时，你可以安心享受一杯咖啡。</h3>
+  <h3>桌面通知、邮件和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
+  <a href="#">
+    <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
+  </a>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
+  </a>
+  <a href="https://www.npmjs.com/package/message-mcp">
+    <img src="https://img.shields.io/npm/v/message-mcp" alt="NPM Version">
   </a>
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
@@ -23,13 +32,6 @@
 像个不放心的老板，盯着 AI 输出一行行跳动，明明可以去处理别的事，却偏偏一刻都离不开屏幕。
 
 **Message MCP 让你彻底解放注意力！**
-
-## ✨ 功能亮点
-
-- 🖥️ **系统消息**：任务完成即刻弹出桌面通知，无需反复查看界面
-- 📧 **邮件提醒**：支持 SMTP，跨设备及时收到任务进展
-- 🎧 **提示音效**：结合系统音效提醒，重要节点不漏听
-- 🔗 **Webhook 集成**：轻松将任务状态推送到你的 API 或自动化流程中
 
 ## 💡 使用方法
 
@@ -81,7 +83,7 @@
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
       ]
     }
   }
@@ -95,9 +97,9 @@
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQ邮箱**: `smtps://user:pass@smtp.qq.com:465`
 
-#### Webhook 通知配置（可选）
+#### API 通知配置（可选）
 
-如果您想使用 Webhook 通知功能，请添加 webhook URL 配置参数：
+如果您想使用 API 通知功能，请添加 API URL 配置参数：
 
 ```json
 {
@@ -106,7 +108,7 @@
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--webhook-url=https://your-webhook-endpoint.com/notify"
+        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
       ]
     }
   }

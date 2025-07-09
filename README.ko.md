@@ -6,12 +6,21 @@
     <a href="README.zh.md">中文</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>실시간 푸시 알림과 알림 소리로 화면을 지켜보지 않아도 됩니다. AI가 작업하는 동안 편안하게 커피 한 잔을 즐기세요.</h3>
+  <h3>데스크톱 알림, 이메일 및 API 푸시로 AI 작업 대기 불안을 줄이고 편안하게 커피 한잔을 즐기세요.</h3>
+  <a href="#">
+    <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
+  </a>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
+  </a>
+  <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
+  </a>
+  <a href="https://www.npmjs.com/package/message-mcp">
+    <img src="https://img.shields.io/npm/v/message-mcp" alt="NPM Version">
   </a>
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
@@ -23,13 +32,6 @@
 걱정스러운 상사처럼 AI 출력을 한 줄씩 응시하며, 분명히 다른 일을 처리할 수 있음에도 불구하고 화면에서 잠시도 떨어질 수 없어 하고 있습니다.
 
 **Message MCP로 완전히 주의력을 해방시켜 보세요!**
-
-## ✨ 기능 하이라이트
-
-- 🖥️ **시스템 메시지**: 작업 완료 시 즉시 데스크톱 알림이 팝업되어 인터페이스를 반복적으로 확인할 필요 없음
-- 📧 **이메일 알림**: SMTP 지원으로 기기 간 작업 진행 상황을 적시에 수신
-- 🎧 **음향 효과**: 시스템 음향 효과와 결합된 리마인더로 중요한 마일스톤을 놓치지 않음
-- 🔗 **Webhook 통합**: 작업 상태를 API나 자동화 워크플로우에 쉽게 푸시
 
 ## 💡 사용법
 
@@ -81,7 +83,7 @@
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--smtp-url=smtp://your-email@gmail.com:your-app-password@smtp.gmail.com:587"
+        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
       ]
     }
   }
@@ -97,7 +99,7 @@
 
 #### 웹훅 알림 설정(선택)
 
-웹훅 알림을 사용하려면 webhook URL을 추가하세요:
+웹훅 알림을 사용하려면 API URL을 추가하세요:
 
 ```json
 {
@@ -106,7 +108,7 @@
       "command": "npx",
       "args": [
         "message-mcp@latest",
-        "--webhook-url=https://your-webhook-endpoint.com/notify"
+        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
       ]
     }
   }

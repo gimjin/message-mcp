@@ -18,7 +18,7 @@ const server = new McpServer({
 const args = arg(
   {
     '--smtp-url': String,
-    '--webhook-url': String,
+    '--api-url': String,
   },
   {
     permissive: true,
@@ -26,7 +26,7 @@ const args = arg(
   },
 )
 const smtpUrl = args['--smtp-url']
-const webhookUrl = args['--webhook-url']
+const apiUrl = args['--api-url']
 
 // Parse SMTP URL
 function parseSmtpUrl(url: string) {
@@ -51,7 +51,7 @@ server.registerTool(
   {
     title: 'Send Message Notification',
     description:
-      'Send notifications and messages through multiple channels (desktop, email, webhook). Use this tool to notify users about any important information, progress updates, task completions, alerts, or any other communication needs.',
+      'Send notifications and messages through multiple channels (desktop, email, API). Use this tool to notify users about any important information, progress updates, task completions, alerts, or any other communication needs.',
     inputSchema: {
       message: z
         .string()
@@ -65,30 +65,13 @@ server.registerTool(
     const results = []
 
     // Desktop notification
-    try {
-      await new Promise((resolve, reject) => {
-        notifier.notify(
-          {
-            title: notifyTitle,
-            message: notifyMessage,
-            sound: true,
-          },
-          (error) => {
-            if (error) {
-              reject(error)
-            } else {
-              resolve(true)
-            }
-          },
-        )
-      })
-      results.push('Desktop notification sent successfully!')
-    } catch (error) {
-      results.push(
-        `Desktop notification failed: ${error instanceof Error ? error.message : String(error)}`,
-      )
-      console.error('Error sending desktop notification:', error)
-    }
+    notifier.notify({
+      title: notifyTitle,
+      message: notifyMessage,
+      sound: true,
+    })
+    // BUG: node-notifier callback has very high latency on Windows WSL2 and cannot be used for failure reasoning
+    results.push('Desktop notification sent successfully!')
 
     // Email notification
     if (smtpUrl) {
@@ -125,10 +108,10 @@ server.registerTool(
       }
     }
 
-    // Webhook notification
-    if (webhookUrl) {
+    // API notification
+    if (apiUrl) {
       try {
-        const response = await fetch(webhookUrl, {
+        const response = await fetch(apiUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -139,10 +122,10 @@ server.registerTool(
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`)
         }
-        results.push('Webhook notification sent successfully!')
+        results.push('API notification sent successfully!')
       } catch (error) {
         results.push(
-          `Webhook notification failed: ${error instanceof Error ? error.message : String(error)}`,
+          `API notification failed: ${error instanceof Error ? error.message : String(error)}`,
         )
         console.error('Error posting notification:', error)
       }
@@ -161,9 +144,7 @@ async function main() {
   const transport = new StdioServerTransport()
   await server.connect(transport)
   console.error(`${smtpUrl ? `SMTP URL: ${smtpUrl}` : 'No SMTP URL provided'}`)
-  console.error(
-    `${webhookUrl ? `Webhook URL: ${webhookUrl}` : 'No webhook URL provided'}`,
-  )
+  console.error(`${apiUrl ? `API URL: ${apiUrl}` : 'No API URL provided'}`)
   console.error('message-mcp MCP Server running on stdio')
 }
 
