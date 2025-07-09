@@ -1,8 +1,29 @@
 {
   "name": "message-mcp",
-  "description": "Real-time push notifications and alert sounds free you from staring at the screen. While the AI works, you can comfortably enjoy a cup of coffee.",
+  "description": "Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.",
   "version": "1.2.6",
   "license": "MIT",
+  "keywords": [
+    "message",
+    "mcp",
+    "model-context-protocol",
+    "notification",
+    "desktop-notification",
+    "ai-tools",
+    "api",
+    "email-notification",
+    "real-time",
+    "typescript",
+    "cli-tool",
+    "developer-tools",
+    "productivity",
+    "chatgpt",
+    "claude",
+    "cursor",
+    "copilot",
+    "ai-coding",
+    "automation"
+  ],
   "author": "gimjin",
   "repository": {
     "type": "git",
@@ -28,6 +49,13 @@
     "node": "^22.16.0",
     "pnpm": "^10.12.1"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "arg": "^5.0.2",
+    "node-notifier": "^10.0.1",
+    "nodemailer": "^7.0.4",
+    "zod": "^3.25.74"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -43,12 +71,5 @@
     "replace-in-file": "^8.3.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.1"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.15.0",
-    "arg": "^5.0.2",
-    "node-notifier": "^10.0.1",
-    "nodemailer": "^7.0.4",
-    "zod": "^3.25.74"
   }
 }
