@@ -106,10 +106,7 @@ API通知を利用したい場合は、API URLを追加してください：
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": [
-        "message-mcp@latest",
-        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
-      ]
+      "args": ["message-mcp@latest", "--api-url=https://httpbin.org/post"]
     }
   }
 }

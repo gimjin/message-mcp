@@ -22,5 +22,5 @@ startCommand:
         type: string
         description: SMTP URL for sending email notifications using RFC2396 format
   exampleConfig:
-    apiUrl: https://jsonplaceholder.typicode.com/todos/1
+    apiUrl: https://httpbin.org/post
     smtpUrl: smtp://user@gmail.com:pass@smtp.gmail.com:587

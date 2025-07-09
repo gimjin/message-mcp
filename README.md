@@ -106,10 +106,7 @@ If you want to use API notifications, add the API URL configuration parameter:
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": [
-        "message-mcp@latest",
-        "--api-url=https://jsonplaceholder.typicode.com/todos/1"
-      ]
+      "args": ["message-mcp@latest", "--api-url=https://httpbin.org/post"]
     }
   }
 }
