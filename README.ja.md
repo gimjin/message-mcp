@@ -40,13 +40,13 @@
 
 [![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 **ユーザー**：テトリスのWebゲームを作って。**_タスク完了後に通知してください_**。  
+🧑 **ユーザー**：テトリスのWebゲームを作って。**_タスク完了時に通知_**。  
 🤖 **AI**：テトリスゲームの作成を開始します...
 
 > [!tip]
 >
-> - `Cursor 設定 > チャット > 自動実行` でこのオプションを有効にすると、AIアシスタントが自動的にコマンドを実行できるようになります。
-> - `Cursor 設定 > ルール` で **_"タスク完了時に通知"_** を追加すると、繰り返しの指示を避けることができます。
+> - `Cursor設定 > チャット > 自動実行` オプションを有効にして、MCPの自動実行を許可してください。
+> - `Cursor設定 > ルール` に **_「タスク完了時に通知」_** を追加して、繰り返しの指示を避けてください。
 
 ### 手動インストール
 

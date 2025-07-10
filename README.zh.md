@@ -40,13 +40,13 @@
 
 [![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 **用户**：做一款俄罗斯方块网页游戏，**_完成任务后通知我_**。  
+🧑 **用户**：做一款俄罗斯方块网页游戏，**_任务完成后通知我_**。  
 🤖 **AI**：我将开始做俄罗斯方块游戏...
 
 > [!tip]
 >
-> - 在 `Cursor 设置 > 聊天 > 自动运行` 中启用此选项，允许 AI 助手自动执行命令。
-> - 在 `Cursor 设置 > 规则` 中添加 **_"任务完成后通知我"_** 可避免重复指令。
+> - 启用 `Cursor 设置 > 聊天 > 自动运行` 选项，允许自动执行 MCP 操作。
+> - 把 **_"任务完成后通知我"_** 添加到 `Cursor 设置 > 规则`，可避免重复指令。
 
 ### 手动安装
 
