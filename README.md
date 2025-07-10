@@ -7,15 +7,18 @@
     <a href="README.ja.md">日本語</a>
   </p>
   <h3>Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.</h3>
-  <a href="#">
+  <span>
     <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
-  </a>
+  </span>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
+  <span>
+    <img src="https://message-mcp-werker.kimseongrim.workers.dev/analytics.png" title="MCP Analytics"/>
+  </span>
   <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
   </a>
@@ -41,8 +44,9 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 🤖 **AI**: I'll start making the Tetris game...
 
 > [!tip]
-> Add **_"Notify me when the task is complete"_** to `Cursor Settings → Rules` to say goodbye to repetitive instructions.
-> Or add **_"Notify me after completing complex tasks"_**, and AI will only remind you of complex tasks, with zero interruption for simple tasks.
+>
+> - Enable this option in `Cursor Settings > Chat > Auto-run` to allow the AI assistant to automatically execute commands.
+> - Add **_"Notify me when task is complete"_** in `Cursor Settings > Rules` to avoid repetitive instructions.
 
 ### Install manually
 

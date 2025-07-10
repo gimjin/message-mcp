@@ -7,15 +7,18 @@
     <a href="README.ja.md">日本語</a>
   </p>
   <h3>桌面通知、邮件和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
-  <a href="#">
+  <span>
     <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
-  </a>
+  </span>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
+  <span>
+    <img src="https://message-mcp-werker.kimseongrim.workers.dev/analytics.png" title="MCP Analytics"/>
+  </span>
   <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
   </a>
@@ -41,8 +44,9 @@
 🤖 **AI**：我将开始做俄罗斯方块游戏...
 
 > [!tip]
-> `Cursor 设置 → Rules` 添加 **_“完成任务后通知我”_** 告别重复指令。
-> 或添加 **_“复杂任务完成后通知我”_**，AI 仅对复杂任务提醒，简单任务零打扰。
+>
+> - 在 `Cursor 设置 > 聊天 > 自动运行` 中启用此选项，允许 AI 助手自动执行命令。
+> - 在 `Cursor 设置 > 规则` 中添加 **_"任务完成后通知我"_** 可避免重复指令。
 
 ### 手动安装
 

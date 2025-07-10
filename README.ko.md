@@ -7,15 +7,18 @@
     <a href="README.ja.md">日本語</a>
   </p>
   <h3>데스크톱 알림, 이메일 및 API 푸시로 AI 작업 대기 불안을 줄이고 편안하게 커피 한잔을 즐기세요.</h3>
-  <a href="#">
+  <span>
     <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
-  </a>
+  </span>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
+  <span>
+    <img src="https://message-mcp-werker.kimseongrim.workers.dev/analytics.png" title="MCP Analytics"/>
+  </span>
   <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
   </a>
@@ -41,8 +44,9 @@
 🤖 **AI**: 테트리스 게임을 만들기 시작하겠습니다...
 
 > [!tip]
-> `Cursor 설정 → Rules` 에 **_"작업 완료 후 알려주세요"_** 를 추가하여 반복적인 지시와 작별하세요.
-> 또는 **_"복잡한 작업 완료 후 알려주세요"_** 를 추가하면, AI는 복잡한 작업에 대해서만 알려주고 간단한 작업은 방해하지 않습니다.
+>
+> - `Cursor 설정 > 채팅 > 자동 실행` 에서 이 옵션을 활성화하여 AI 어시스턴트가 자동으로 명령을 실행할 수 있도록 합니다.
+> - `Cursor 설정 > 규칙` 에서 **_"작업 완료 시 알림"_** 을 추가하면 반복적인 지시를 피할 수 있습니다.
 
 ### 수동 설치
 

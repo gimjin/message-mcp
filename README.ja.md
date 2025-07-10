@@ -7,15 +7,18 @@
     <a href="README.ko.md">한국어</a>
   </p>
   <h3>デスクトップ通知、メール、APIプッシュにより、AIタスクの待機ストレスを軽減し、心地よく一杯のコーヒーを楽しめます。</h3>
-  <a href="#">
+  <span>
     <img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
-  </a>
+  </span>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
   <a href="https://smithery.ai/server/@gimjin/message-mcp">
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
+  <span>
+    <img src="https://message-mcp-werker.kimseongrim.workers.dev/analytics.png" title="MCP Analytics"/>
+  </span>
   <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
   </a>
@@ -41,8 +44,9 @@
 🤖 **AI**：テトリスゲームの作成を開始します...
 
 > [!tip]
-> `Cursor 設定 → Rules` に **_「タスク完了後に通知してください」_** を追加して、繰り返しの指示とお別れしましょう。
-> または **_「複雑なタスク完了後にお知らせください」_** を追加すると、AIは複雑なタスクのみをお知らせし、簡単なタスクでは一切邪魔しません。
+>
+> - `Cursor 設定 > チャット > 自動実行` でこのオプションを有効にすると、AIアシスタントが自動的にコマンドを実行できるようになります。
+> - `Cursor 設定 > ルール` で **_"タスク完了時に通知"_** を追加すると、繰り返しの指示を避けることができます。
 
 ### 手動インストール
 
