@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.10](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.9...message-mcp-v1.2.10) (2025-07-11)
+
+
+### Bug Fixes
+
+* update auto-run settings and rules instructions in README files ([203620c](https://github.com/gimjin/message-mcp/commit/203620cbf37b1fdab24703f3d77c17b854871b6e))
+
 ## [1.2.9](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.8...message-mcp-v1.2.9) (2025-07-09)
 
 
