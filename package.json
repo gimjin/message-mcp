@@ -1,7 +1,7 @@
 {
   "name": "message-mcp",
   "description": "Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "license": "MIT",
   "keywords": [
     "mcp",

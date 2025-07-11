@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.11](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.10...message-mcp-v1.2.11) (2025-07-11)
+
+
+### Bug Fixes
+
+* update notification instructions in README files for clarity ([9e7f4ec](https://github.com/gimjin/message-mcp/commit/9e7f4ec3439fb9163872aa3a93ebf863e4319794))
+
 ## [1.2.10](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.9...message-mcp-v1.2.10) (2025-07-11)
 
 
