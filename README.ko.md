@@ -40,15 +40,13 @@
 
 [![인스톨_MCP-Cursor](https://img.shields.io/badge/인스톨_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![인스톨_MCP-VS_Code](https://img.shields.io/badge/인스톨_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![인스톨_MCP-VS_Code_Insiders](https://img.shields.io/badge/인스톨_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 **사용자**: 테트리스 웹 게임을 만들어 주세요. **_작업 완료 시 알림_**.  
+🧑 **사용자**: 테트리스 웹 게임을 만들어 주세요. **_완료 시 알림_**.  
 🤖 **AI**: 테트리스 게임을 만들기 시작하겠습니다...
 
-> [!tip]
+> ⚠️ 일반적으로 MCP 클라이언트는 설정이 필요합니다
 >
-> - `Cursor 설정 > 채팅 > 자동 실행 모드` 옵션을 활성화하여 MCP 자동 실행을 허용하세요.
-> - `Cursor 설정 > 규칙과 기억 > 사용자 규칙` 에 **_"작업 완료 시 알림"_** 을 추가하여 반복적인 지시를 피하세요.
-
-MCP 의 자동 실행을 허용하려면 `Cursor 설정 > 채팅 > 자동 실행` 에서 이 옵션을 활성화하세요.
+> - 자동 실행을 활성화하여 MCP가 자동으로 실행되도록 허용합니다.
+> - 사용자 규칙에 "완료 시 알림"을 추가하여 반복적인 지시를 피합니다.
 
 ### 수동 설치
 

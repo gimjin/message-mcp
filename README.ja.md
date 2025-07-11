@@ -40,13 +40,13 @@
 
 [![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
 
-🧑 **ユーザー**：テトリスのWebゲームを作って。**_タスク完了時に通知_**。  
+🧑 **ユーザー**：テトリスのWebゲームを作って。**_完了時に通知_**。  
 🤖 **AI**：テトリスゲームの作成を開始します...
 
-> [!tip]
+> ⚠️ 通常 MCP クライアントは設定が必要です
 >
-> - `Cursor設定 > チャット > 自動実行モード` オプションを有効にして、MCPの自動実行を許可してください。
-> - `Cursor設定 > ルールとメモリ > ユーザールール` に **_「タスク完了時に通知」_** を追加して、繰り返しの指示を避けてください。
+> - 自動実行を有効にして、MCPが自動実行されるようにします。
+> - ユーザールールに「完了時に通知」を追加して、繰り返しの指示を避けます。
 
 ### 手動インストール
 
