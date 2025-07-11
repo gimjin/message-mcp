@@ -45,8 +45,8 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 
 > [!tip]
 >
-> - Enable the `Cursor Settings > Chat > Auto Run` option to allow automatic MCP execution.
-> - Add **_"Notify me when task is completed"_** to `Cursor Settings > Rules` to avoid repetitive instructions.
+> - Enable the `Cursor Settings > Chat > Auto-Run Mode` option to allow automatic MCP execution.
+> - Add **_"Notify me when task is completed"_** to `Cursor Settings > Rules & Memories > User Rules` to avoid repetitive instructions.
 
 ### Install manually
 
