@@ -17,7 +17,7 @@
     <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
   <a href="https://dash.cloudflare.com">
-    <img src="https://message-mcp-werker.kimseongrim.workers.dev/visit-count.svg" title="MCP Analytics"/>
+    <img src="https://message-mcp-werker.kimseongrim.workers.dev/visit-count.svg?t=1" title="MCP Analytics"/>
   </a>
   <a href="https://github.com/gimjin/message-mcp/blob/main/.github/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/gimjin/message-mcp/ci.yml" alt="MIT License">
