@@ -6,7 +6,7 @@
     <a href="README.zh.md">中文</a> |
     <a href="README.ko.md">한국어</a>
   </p>
-  <h3>デスクトップ通知、メール、APIプッシュにより、AIタスクの待機ストレスを軽減し、心地よく一杯のコーヒーを楽しめます。</h3>
+  <h3>デスクトップ通知、カスタムサウンド、ntfyモバイル通知、メール通知、APIプッシュにより、AIタスクの待機ストレスを軽減し、心地よく一杯のコーヒーを楽しめます。</h3>
   <a href="https://modelcontextprotocol.io">
     <img src="https://img.shields.io/badge/MCP-Server-gold?labelColor=wheat&color=limegreen" title="MCP Server"/>
   </a>
@@ -50,7 +50,10 @@
 
 ### 手動インストール
 
-#### MacOS / Linux
+#### MacOS / Linux / WSL2
+
+<details open>
+<summary>クリックして展開</summary>
 
 ```json
 {
@@ -63,7 +66,12 @@
 }
 ```
 
+</details>
+
 #### Windows
+
+<details>
+<summary>クリックして展開</summary>
 
 ```json
 {
@@ -76,9 +84,62 @@
 }
 ```
 
+</details>
+
+#### カスタムサウンド通知設定（オプション）
+
+<details>
+<summary>クリックして展開</summary>
+
+カスタムサウンド通知を利用したい場合は、サウンドファイルパスの設定パラメータを追加してください：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+    }
+  }
+}
+```
+
+**デフォルトカスタムサウンド**: デフォルトサウンドは [zapsplat.com](https://zapsplat.com/) から提供されます。デフォルトカスタムサウンドが気に入らない場合は、このWebサイトからダウンロードして設定できます。
+
+</details>
+
+#### ntfyモバイル通知設定（オプション）
+
+<details>
+<summary>クリックして展開</summary>
+
+ntfyモバイル通知を利用したい場合は、トピック設定パラメータを追加してください：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+    }
+  }
+}
+```
+
+**ntfyアプリダウンロードリンク:**
+
+- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
+- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
+
+</details>
+
 #### メール通知設定（オプション）
 
-メール通知を利用したい場合は、`args` 配列にSMTP URLを追加してください：
+<details>
+<summary>クリックして展開</summary>
+
+メール通知を利用したい場合は、SMTP URL設定パラメータを追加してください：
 
 ```json
 {
@@ -101,9 +162,14 @@
 - **Yahoo**：`smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQメール**：`smtps://user:pass@smtp.qq.com:465`
 
+</details>
+
 #### API通知設定（オプション）
 
-API通知を利用したい場合は、API URLを追加してください：
+<details>
+<summary>クリックして展開</summary>
+
+API通知を利用したい場合は、API URL設定パラメータを追加してください：
 
 ```json
 {
@@ -115,6 +181,8 @@ API通知を利用したい場合は、API URLを追加してください：
   }
 }
 ```
+
+</details>
 
 ## 📌 システム要件
 

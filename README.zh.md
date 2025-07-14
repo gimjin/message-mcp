@@ -6,7 +6,7 @@
     <a href="README.ko.md">한국어</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>桌面通知、邮件和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
+  <h3>桌面通知、个性声音、ntfy 手机应用通知、邮件通知和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
   <a href="https://modelcontextprotocol.io">
     <img src="https://img.shields.io/badge/MCP-Server-gold?labelColor=wheat&color=limegreen" title="MCP Server"/>
   </a>
@@ -50,7 +50,10 @@
 
 ### 手动安装
 
-#### MacOS / Linux
+#### MacOS / Linux / WSL2
+
+<details open>
+<summary>点击展开</summary>
 
 ```json
 {
@@ -63,7 +66,12 @@
 }
 ```
 
+</details>
+
 #### Windows
+
+<details>
+<summary>点击展开</summary>
 
 ```json
 {
@@ -76,9 +84,62 @@
 }
 ```
 
+</details>
+
+#### 个性声音通知配置（可选）
+
+<details>
+<summary>点击展开</summary>
+
+如果您想使用自定义声音通知功能，请添加声音文件路径配置参数：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+    }
+  }
+}
+```
+
+**默认个性声音**：默认声音来自于 [zapsplat.com](https://zapsplat.com/)。如果不喜欢默认个性声音，可以到这个网站下载配置。
+
+</details>
+
+#### ntfy 手机端通知配置（可选）
+
+<details>
+<summary>点击展开</summary>
+
+如果您想使用 ntfy 手机端通知功能，请添加 topic 配置参数：
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+    }
+  }
+}
+```
+
+**ntfy 应用下载地址：**
+
+- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
+- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
+
+</details>
+
 #### 邮件通知配置（可选）
 
-如果您想使用邮件通知功能，请在 `args` 数组中添加 SMTP URL 配置参数：
+<details>
+<summary>点击展开</summary>
+
+如果您想使用邮件通知功能，请添加 SMTP URL 配置参数：
 
 ```json
 {
@@ -101,7 +162,12 @@
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQ邮箱**: `smtps://user:pass@smtp.qq.com:465`
 
+</details>
+
 #### API 通知配置（可选）
+
+<details>
+<summary>点击展开</summary>
 
 如果您想使用 API 通知功能，请添加 API URL 配置参数：
 
@@ -115,6 +181,8 @@
   }
 }
 ```
+
+</details>
 
 ## 📌 系统要求
 
