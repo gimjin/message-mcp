@@ -6,7 +6,7 @@
     <a href="README.zh.md">中文</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>데스크톱 알림, 이메일 및 API 푸시로 AI 작업 대기 불안을 줄이고 편안하게 커피 한잔을 즐기세요.</h3>
+  <h3>데스크톱 알림, 개인 맞춤 사운드, ntfy 모바일 알림, 이메일 알림 및 API 푸시로 AI 작업 대기 불안을 줄이고 편안하게 커피 한잔을 즐기세요.</h3>
   <a href="https://modelcontextprotocol.io">
     <img src="https://img.shields.io/badge/MCP-Server-gold?labelColor=wheat&color=limegreen" title="MCP Server"/>
   </a>
@@ -50,7 +50,10 @@
 
 ### 수동 설치
 
-#### MacOS / Linux
+#### MacOS / Linux / WSL2
+
+<details open>
+<summary>클릭하여 펼치기</summary>
 
 ```json
 {
@@ -63,7 +66,12 @@
 }
 ```
 
+</details>
+
 #### Windows
+
+<details>
+<summary>클릭하여 펼치기</summary>
 
 ```json
 {
@@ -76,9 +84,62 @@
 }
 ```
 
+</details>
+
+#### 개인 맞춤 사운드 알림 설정(선택)
+
+<details>
+<summary>클릭하여 펼치기</summary>
+
+사용자 지정 사운드 알림을 사용하려면 사운드 파일 경로 구성 매개변수를 추가하세요:
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+    }
+  }
+}
+```
+
+**기본 개인 맞춤 사운드**: 기본 사운드는 [zapsplat.com](https://zapsplat.com/)에서 제공됩니다. 기본 개인 맞춤 사운드가 마음에 들지 않으면 이 웹사이트에서 다운로드하여 구성할 수 있습니다.
+
+</details>
+
+#### ntfy 모바일 알림 설정(선택)
+
+<details>
+<summary>클릭하여 펼치기</summary>
+
+ntfy 모바일 알림을 사용하려면 토픽 구성 매개변수를 추가하세요:
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+    }
+  }
+}
+```
+
+**ntfy 앱 다운로드 링크:**
+
+- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
+- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
+
+</details>
+
 #### 이메일 알림 설정(선택)
 
-이메일 알림을 사용하려면 `args` 배열에 SMTP URL을 추가하세요:
+<details>
+<summary>클릭하여 펼치기</summary>
+
+이메일 알림을 사용하려면 SMTP URL 구성 매개변수를 추가하세요:
 
 ```json
 {
@@ -101,9 +162,14 @@
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQ메일**: `smtps://user:pass@smtp.qq.com:465`
 
+</details>
+
 #### 웹훅 알림 설정(선택)
 
-웹훅 알림을 사용하려면 API URL을 추가하세요:
+<details>
+<summary>클릭하여 펼치기</summary>
+
+웹훅 알림을 사용하려면 API URL 구성 매개변수를 추가하세요:
 
 ```json
 {
@@ -115,6 +181,8 @@
   }
 }
 ```
+
+</details>
 
 ## 📌 시스템 요구사항
 

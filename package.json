@@ -31,7 +31,7 @@
     "message-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && node ./scripts/replace-info.js && chmod 755 build/index.js",
+    "build": "tsc && cp -R src/assets build/assets && node ./scripts/replace-info.js && chmod 755 build/index.js",
     "prepublishOnly": "pnpm build",
     "prepare": "husky"
   },
@@ -47,6 +47,7 @@
     "arg": "^5.0.2",
     "node-notifier": "^10.0.1",
     "nodemailer": "^7.0.4",
+    "play-sound": "^1.1.6",
     "zod": "^3.25.74"
   },
   "devDependencies": {
@@ -56,6 +57,7 @@
     "@types/node": "20.x",
     "@types/node-notifier": "^8.0.5",
     "@types/nodemailer": "^6.4.17",
+    "@types/play-sound": "^1.1.2",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",

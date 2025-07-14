@@ -6,7 +6,7 @@
     <a href="README.ko.md">한국어</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.</h3>
+  <h3>Desktop notifications, custom sounds, ntfy mobile notifications, email notifications, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.</h3>
   <a href="https://modelcontextprotocol.io">
     <img src="https://img.shields.io/badge/MCP-Server-gold?labelColor=wheat&color=limegreen" title="MCP Server"/>
   </a>
@@ -50,7 +50,10 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 
 ### Install manually
 
-#### MacOS / Linux
+#### MacOS / Linux / WSL2
+
+<details open>
+<summary>Click to expand</summary>
 
 ```json
 {
@@ -63,7 +66,12 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 }
 ```
 
+</details>
+
 #### Windows
+
+<details>
+<summary>Click to expand</summary>
 
 ```json
 {
@@ -76,9 +84,62 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 }
 ```
 
+</details>
+
+#### Custom Sound Notification Setup (Optional)
+
+<details>
+<summary>Click to expand</summary>
+
+If you want to use custom sound notifications, add the sound file path configuration parameter:
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+    }
+  }
+}
+```
+
+**Default Custom Sound**: Default sound comes from [zapsplat.com](https://zapsplat.com/). If you don't like the default custom sound, you can download and configure from this website.
+
+</details>
+
+#### ntfy Mobile Notification Setup (Optional)
+
+<details>
+<summary>Click to expand</summary>
+
+If you want to use ntfy mobile notifications, add the topic configuration parameter:
+
+```json
+{
+  "mcpServers": {
+    "message-mcp": {
+      "command": "npx",
+      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+    }
+  }
+}
+```
+
+**ntfy App Download Links:**
+
+- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
+- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
+
+</details>
+
 #### Email Notification Setup (Optional)
 
-If you want to use email notifications, add the SMTP URL configuration parameter to the `args` array:
+<details>
+<summary>Click to expand</summary>
+
+If you want to use email notifications, add the SMTP URL configuration parameter:
 
 ```json
 {
@@ -101,7 +162,12 @@ If you want to use email notifications, add the SMTP URL configuration parameter
 - **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
 - **QQ Mail**: `smtps://user:pass@smtp.qq.com:465`
 
+</details>
+
 #### API Notification Setup (Optional)
+
+<details>
+<summary>Click to expand</summary>
 
 If you want to use API notifications, add the API URL configuration parameter:
 
@@ -115,6 +181,8 @@ If you want to use API notifications, add the API URL configuration parameter:
   }
 }
 ```
+
+</details>
 
 ## 📌 System Requirements
 
