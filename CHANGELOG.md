@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.11...message-mcp-v1.3.0) (2025-07-15)
+
+
+### Features
+
+* add custom sound notification and ntfy mobile notification support ([f32cc65](https://github.com/gimjin/message-mcp/commit/f32cc65ca89ff358d283581526f6804eeb38e4a6))
+
 ## [1.2.11](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.10...message-mcp-v1.2.11) (2025-07-11)
 
 
