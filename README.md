@@ -197,6 +197,12 @@ If you want to use API notifications, add the API URL configuration parameter:
 
 Settings > Notifications & actions > Get notifications from apps and other senders → Enable
 
+#### WSL2 (Ubuntu) has no notification sound
+
+```bash
+sudo apt install -y pulseaudio mpg123
+```
+
 #### WSL2 Environment Missing OS Notifications
 
 ```bash

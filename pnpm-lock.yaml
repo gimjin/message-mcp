@@ -22,6 +22,9 @@ importers:
       play-sound:
         specifier: ^1.1.6
         version: 1.1.6
+      rfc2047:
+        specifier: ^4.0.1
+        version: 4.0.1
       zod:
         specifier: ^3.25.74
         version: 3.25.74
@@ -47,6 +50,9 @@ importers:
       '@types/play-sound':
         specifier: ^1.1.2
         version: 1.1.2
+      '@types/rfc2047':
+        specifier: ^2.0.3
+        version: 2.0.3
       eslint:
         specifier: ^9.25.1
         version: 9.30.1(jiti@2.4.2)
@@ -396,6 +402,12 @@ packages:
     resolution:
       {
         integrity: sha512-alq2D5sBtVcq5bzL/yLr5SSQ7B4VTIkX728V3nYfo6TaCtnwFLdHsFgy+N9oCjh67OOZQnj7kkJauWNW0L8bWw==,
+      }
+
+  '@types/rfc2047@2.0.3':
+    resolution:
+      {
+        integrity: sha512-ALrav8usNLr6OmfHPPmx6om2rgwCQaZaLw2nW+VoH43ZzU6nPbUhejE5+kyEtqr5F54aLuK9Mv6sRwYCgBYc0w==,
       }
 
   '@typescript-eslint/eslint-plugin@8.35.1':
@@ -1311,6 +1323,13 @@ packages:
     engines: { node: '>=18' }
     hasBin: true
 
+  iconv-lite@0.4.5:
+    resolution:
+      {
+        integrity: sha512-LQ4GtDkFagYaac8u4rE73zWu7h0OUUmR0qVBOgzLyFSoJhoDG2xV9PZJWWyVVcYha/9/RZzQHUinFMbNKiOoAA==,
+      }
+    engines: { node: '>=0.8.0' }
+
   iconv-lite@0.6.3:
     resolution:
       {
@@ -2045,6 +2064,12 @@ packages:
       }
     engines: { iojs: '>=1.0.0', node: '>=0.10.0' }
 
+  rfc2047@4.0.1:
+    resolution:
+      {
+        integrity: sha512-x5zHBAZtSSZDuBNAqGEAVpsQFV+YUluIkMWVaYRMEeGoLPxNVMmg67TxRnXwmRmCB7QaneyrkWXeKqbjfcK6RA==,
+      }
+
   rfdc@1.4.1:
     resolution:
       {
@@ -2715,6 +2740,8 @@ snapshots:
     dependencies:
       '@types/node': 20.19.4
 
+  '@types/rfc2047@2.0.3': {}
+
   '@typescript-eslint/eslint-plugin@8.35.1(@typescript-eslint/parser@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
@@ -3311,6 +3338,8 @@ snapshots:
 
   husky@9.1.7: {}
 
+  iconv-lite@0.4.5: {}
+
   iconv-lite@0.6.3:
     dependencies:
       safer-buffer: 2.1.2
@@ -3648,6 +3677,10 @@ snapshots:
       signal-exit: 4.1.0
 
   reusify@1.1.0: {}
+
+  rfc2047@4.0.1:
+    dependencies:
+      iconv-lite: 0.4.5
 
   rfdc@1.4.1: {}
 

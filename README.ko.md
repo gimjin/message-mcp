@@ -197,6 +197,12 @@ ntfy 모바일 알림을 사용하려면 토픽 구성 매개변수를 추가하
 
 설정 > 알림 및 작업 > 앱 및 기타 발신자로부터 알림 받기 → 사용
 
+#### WSL2 (Ubuntu)에 알림 소리가 없습니다
+
+```bash
+sudo apt install -y pulseaudio mpg123
+```
+
 #### WSL2 환경에서 OS 알림 누락
 
 ```bash

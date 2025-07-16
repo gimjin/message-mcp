@@ -197,6 +197,12 @@ API通知を利用したい場合は、API URL設定パラメータを追加し�
 
 設定 > 通知とアクション > アプリやその他の送信者からの通知を受け取る → 有効化
 
+#### WSL2（Ubuntu）には通知音がありません
+
+```bash
+sudo apt install -y pulseaudio mpg123
+```
+
 #### WSL2 環境でOS通知が不足
 
 ```bash

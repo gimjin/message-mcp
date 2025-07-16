@@ -5,10 +5,11 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod'
 import arg from 'arg'
+import rfc2047 from 'rfc2047'
 import play from 'play-sound'
 import nodemailer from 'nodemailer'
 import notifier from 'node-notifier'
-import { parseSmtpUrl } from './utils.js'
+import { parseSmtpUrl, universalRequest } from './utils.js'
 
 const server = new McpServer({
   name: '#name',
@@ -59,14 +60,13 @@ server.registerTool(
     // NTFY notification
     if (ntfyTopic) {
       try {
-        await fetch('https://ntfy.sh', {
+        await universalRequest(`https://ntfy.sh/${ntfyTopic}`, {
           method: 'POST',
-          body: JSON.stringify({
-            title: notifyTitle,
-            message: notifyMessage,
-            topic: ntfyTopic,
-            priority: 5,
-          }),
+          body: notifyMessage,
+          headers: {
+            Title: rfc2047.encode(notifyTitle),
+            Priority: 'urgent',
+          },
         })
         results.push('NTFY notification sent successfully!')
       } catch (error) {
@@ -79,43 +79,40 @@ server.registerTool(
 
     // Email notification
     if (smtpUrl) {
-      const smtpConfig = parseSmtpUrl(smtpUrl)
-      if (smtpConfig) {
-        try {
-          const transporter = nodemailer.createTransport({
-            host: smtpConfig.host,
-            port: smtpConfig.port,
-            secure: smtpConfig.secure,
-            auth: {
-              user: smtpConfig.user,
-              pass: smtpConfig.pass,
-            },
-          })
+      try {
+        const smtpConfig = parseSmtpUrl(smtpUrl)
 
-          const mailOptions = {
-            from: smtpConfig.user,
-            to: smtpConfig.user,
-            subject: notifyTitle,
-            text: notifyMessage,
-          }
+        const transporter = nodemailer.createTransport({
+          host: smtpConfig.host,
+          port: smtpConfig.port,
+          secure: smtpConfig.secure,
+          auth: {
+            user: smtpConfig.user,
+            pass: smtpConfig.pass,
+          },
+        })
 
-          await transporter.sendMail(mailOptions)
-          results.push('Email notification sent successfully!')
-        } catch (error) {
-          results.push(
-            `Email notification failed: ${error instanceof Error ? error.message : String(error)}`,
-          )
-          console.error('Error sending email:', error)
+        const mailOptions = {
+          from: smtpConfig.user,
+          to: smtpConfig.user,
+          subject: notifyTitle,
+          text: notifyMessage,
         }
-      } else {
-        results.push('Email notification failed: Invalid SMTP URL format')
+
+        await transporter.sendMail(mailOptions)
+        results.push('Email notification sent successfully!')
+      } catch (error) {
+        results.push(
+          `Email notification failed: ${error instanceof Error ? error.message : String(error)}`,
+        )
+        console.error('Error sending email:', error)
       }
     }
 
     // API notification
     if (apiUrl) {
       try {
-        const response = await fetch(apiUrl, {
+        const response = await universalRequest(apiUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

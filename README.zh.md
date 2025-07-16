@@ -197,6 +197,12 @@
 
 设置 > 通知和操作 > 获取来自应用和其他发送者的通知 → 启用
 
+#### WSL2（Ubuntu）没有通知声音
+
+```bash
+sudo apt install -y pulseaudio mpg123
+```
+
 #### WSL2 环境缺少操作系统通知
 
 ```bash

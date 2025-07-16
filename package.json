@@ -48,6 +48,7 @@
     "node-notifier": "^10.0.1",
     "nodemailer": "^7.0.4",
     "play-sound": "^1.1.6",
+    "rfc2047": "^4.0.1",
     "zod": "^3.25.74"
   },
   "devDependencies": {
@@ -58,6 +59,7 @@
     "@types/node-notifier": "^8.0.5",
     "@types/nodemailer": "^6.4.17",
     "@types/play-sound": "^1.1.2",
+    "@types/rfc2047": "^2.0.3",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
