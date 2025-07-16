@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.3.0...message-mcp-v1.3.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* implement universal request function for fix nodejs 20 or newer fetch issue ([b01645c](https://github.com/gimjin/message-mcp/commit/b01645c54d5ac936ae62c7b9cf1b9eb7d769c6f5))
+
 ## [1.3.0](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.2.11...message-mcp-v1.3.0) (2025-07-15)
 
 
