@@ -31,7 +31,7 @@
     "message-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && cp -R src/assets build/assets && node ./scripts/replace-info.js && chmod 755 build/index.js",
+    "build": "node esbuild.config.js && chmod 755 build/index.js",
     "prepublishOnly": "pnpm build",
     "prepare": "husky"
   },
@@ -60,12 +60,13 @@
     "@types/nodemailer": "^6.4.17",
     "@types/play-sound": "^1.1.2",
     "@types/rfc2047": "^2.0.3",
+    "esbuild": "^0.25.6",
+    "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
-    "replace-in-file": "^8.3.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.1"
   }
