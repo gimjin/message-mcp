@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { fileURLToPath } from 'url'
 import path from 'path'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
@@ -12,8 +11,8 @@ import notifier from 'node-notifier'
 import { parseSmtpUrl, universalRequest } from './utils.js'
 
 const server = new McpServer({
-  name: '#name',
-  version: '#version',
+  name: process.env.MCP_NAME!,
+  version: process.env.MCP_VERSION!,
   capabilities: {
     resources: {},
     tools: {},
