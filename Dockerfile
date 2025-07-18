@@ -6,8 +6,8 @@ WORKDIR /app
 # Install pnpm
 RUN npm install -g pnpm@10.12.1
 
-# Copy manifest and lockfile
-COPY package.json pnpm-lock.yaml tsconfig.json ./
+# Copy configuration files
+COPY package.json pnpm-lock.yaml tsconfig.json esbuild.config.js ./
 
 # Install dependencies (including dev for build)
 RUN pnpm install --frozen-lockfile
