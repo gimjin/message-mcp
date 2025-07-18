@@ -12,9 +12,8 @@ COPY package.json pnpm-lock.yaml tsconfig.json ./
 # Install dependencies (including dev for build)
 RUN pnpm install --frozen-lockfile
 
-# Copy source code and scripts
+# Copy source code
 COPY src ./src
-COPY scripts ./scripts
 
 # Build artifacts
 RUN pnpm run build
