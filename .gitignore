@@ -1,8 +1,8 @@
-# Custom
-build
-
 # Created by https://www.toptal.com/developers/gitignore/api/git,vim,node,linux,macos,windows,webstorm,sublimetext,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,vim,node,linux,macos,windows,webstorm,sublimetext,visualstudiocode
+
+### Custom ###
+.smithery/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
