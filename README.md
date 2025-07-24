@@ -13,9 +13,6 @@
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
-  <a href="https://smithery.ai/server/@gimjin/message-mcp">
-    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
-  </a>
   <a href="https://dash.cloudflare.com">
     <img src="https://message-mcp-werker.kimseongrim.workers.dev/visit-count.svg?v=5" title="Visit Count"/>
   </a>
@@ -36,164 +33,145 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 
 **Message MCP lets you completely free your attention!**
 
-## 💡 Usage
+```text
+🧑: Make a Tetris web game, notify when completed.
+🤖: I'll start making the Tetris game
+   ...
+💬: Message MCP executed, message sent
+```
 
-[![Install_MCP-Cursor](https://img.shields.io/badge/Install_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Install_MCP-VS_Code](https://img.shields.io/badge/Install_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Install_MCP-VS_Code_Insiders](https://img.shields.io/badge/Install_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
-
-🧑 **User**: Make a Tetris web game. **_notify when completed_**.  
-🤖 **AI**: I'll start making the Tetris game...
-
-> ⚠️ Usually MCP clients need to set up
+> [!TIP]
 >
-> - Enable auto-run to allow MCP to execute automatically.
-> - Add "notify when completed" to user rules to avoid repetitive instructions.
+> - **Allow MCP auto-execution** in client settings.
+> - Add "notify when completed" prompts in **user rules** or **rule files** to avoid repetitive manual prompts.
 
-### Install manually
+### ⚡️ Quick Start
 
-#### MacOS / Linux / WSL2
+[![Click_Install-Cursor](https://img.shields.io/badge/Click_Install-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Click_Install-VS_Code](https://img.shields.io/badge/Click_Install-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Click_Install-VS_Code_Insiders](https://img.shields.io/badge/Click_Install-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-<details open>
-<summary>Click to expand</summary>
+#### smithery.ai Introduction
+
+- shttp mode: Run MCP in the cloud with authentication, TLS encryption, and key hosting all handled for you. Zero local configuration, zero leakage risk, secure calling from anywhere in the browser.
+- stdio mode: One-click installation into mainstream clients like Claude Desktop, Cursor, Windsurf, and more. Ready to use out of the box.
+
+> Learn more by reading [One-click Connect to Smithery Servers](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers).
+
+### ⚙️ Manual Installation
+
+#### MacOS, Linux, WSL2
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest"]
+      "args": ["-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
-
 #### Windows
-
-<details>
-<summary>Click to expand</summary>
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "message-mcp@latest"]
+      "args": ["/c", "npx", "-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
+### 🎛️ Optional Configuration
 
-#### Custom Sound Notification Setup (Optional)
-
-<details>
-<summary>Click to expand</summary>
-
-If you want to use custom sound notifications, add the sound file path configuration parameter:
+#### Modify Desktop Notifications
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "DISABLE_DESKTOP": "true",
+        "SOUND_PATH": "/path/to/your/sound.mp3"
+      }
     }
   }
 }
 ```
 
-**Default Custom Sound**: Default sound comes from [zapsplat.com](https://zapsplat.com/). If you don't like the default custom sound, you can download and configure from this website.
+> - Desktop notifications are enabled by default
+> - Default sound provided by zapsplat. If you don't like the default sound, you can download and configure from [zapsplat.com](https://zapsplat.com/).
 
-</details>
+#### ntfy Mobile Notifications
 
-#### ntfy Mobile Notification Setup (Optional)
-
-<details>
-<summary>Click to expand</summary>
-
-If you want to use ntfy mobile notifications, add the topic configuration parameter:
+Install App: [App Store](https://apps.apple.com/us/app/ntfy/id1625396347), [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy), [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "NTFY_TOPIC": "your-unique-topic"
+      }
     }
   }
 }
 ```
 
-**ntfy App Download Links:**
-
-- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
-- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
-- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
-
-</details>
-
-#### Email Notification Setup (Optional)
-
-<details>
-<summary>Click to expand</summary>
-
-If you want to use email notifications, add the SMTP URL configuration parameter:
+#### Email Notifications
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": [
-        "message-mcp@latest",
-        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
-      ]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "SMTP_HOST": "smtp.gmail.com",
+        "SMTP_PORT": "587",
+        "SMTP_SECURE": "false",
+        "SMTP_USER": "user@gmail.com",
+        "SMTP_PASS": "your_password"
+      }
     }
   }
 }
 ```
 
-**Common SMTP URL Examples:**
-
-- **Gmail**: `smtp://user:pass@smtp.gmail.com:587`
-- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
-- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ Mail**: `smtps://user:pass@smtp.qq.com:465`
-
-</details>
-
-#### API Notification Setup (Optional)
-
-<details>
-<summary>Click to expand</summary>
-
-If you want to use API notifications, add the API URL configuration parameter:
+#### API Notifications
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--api-url=https://httpbin.org/post"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "API_URL": "https://httpbin.org/post",
+        "API_METHOD": "POST",
+        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+      }
     }
   }
 }
 ```
-
-</details>
 
 ## 📌 System Requirements
 
-- Node.js: 18 or newer
+- Node.js: 18 or higher
 - macOS: Native notifications require >= 10.8
 - Linux: notify-osd or libnotify-bin installed (Ubuntu includes by default)
 - Windows: >= 8, or taskbar balloon notifications for Windows < 8
 
-## ⚡ Troubleshooting
+## ❗️ Troubleshooting
 
-#### Windows System Notifications Disabled
+#### Windows System Notifications Not Enabled
 
 Settings > Notifications & actions > Get notifications from apps and other senders → Enable
 
@@ -212,3 +190,7 @@ sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
 
 chmod +x /path/to/.../node_modules/snoretoast-*.exe
 ```
+
+---
+
+If this project is helpful to you, please give it a ⭐️ to support it and let more people see it!

@@ -3,25 +3,6 @@ import { promisify } from 'util'
 
 const execAsync = promisify(exec)
 
-// Parse SMTP URL
-export function parseSmtpUrl(url: string) {
-  try {
-    const parsed = new URL(url)
-    const protocol = parsed.protocol.slice(0, -1) // Remove trailing ':'
-    const secure = protocol === 'smtps' || parsed.port === '465'
-    const host = parsed.hostname
-    const port = parseInt(parsed.port)
-    const user = decodeURIComponent(parsed.username)
-    const pass = decodeURIComponent(parsed.password)
-
-    return { host, port, secure, user, pass }
-  } catch (error) {
-    throw new Error(
-      `Invalid SMTP URL format: ${error instanceof Error ? error.message : String(error)}`,
-    )
-  }
-}
-
 // Fix nodejs fetch issue: https://github.com/nodejs/node/issues/54359#issuecomment-2288886190
 // Universal network request function
 export async function universalRequest(

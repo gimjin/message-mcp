@@ -13,9 +13,6 @@
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
   </a>
-  <a href="https://smithery.ai/server/@gimjin/message-mcp">
-    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
-  </a>
   <a href="https://dash.cloudflare.com">
     <img src="https://message-mcp-werker.kimseongrim.workers.dev/visit-count.svg?v=5" title="Visit Count"/>
   </a>
@@ -36,174 +33,155 @@
 
 **Message MCPで完全に注意力を解放しましょう！**
 
-## 💡 使い方
+```text
+🧑：テトリスのWebゲームを作って、完了時に通知してください。
+🤖：テトリスゲームの作成を開始します
+   ...
+💬：Message MCP実行、メッセージ送信完了
+```
 
-[![インストール_MCP-Cursor](https://img.shields.io/badge/インストール_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![インストール_MCP-VS_Code](https://img.shields.io/badge/インストール_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![インストール_MCP-VS_Code_Insiders](https://img.shields.io/badge/インストール_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
-
-🧑 **ユーザー**：テトリスのWebゲームを作って。**_完了時に通知_**。  
-🤖 **AI**：テトリスゲームの作成を開始します...
-
-> ⚠️ 通常 MCP クライアントは設定が必要です
+> [!TIP]
 >
-> - 自動実行を有効にして、MCPが自動実行されるようにします。
-> - ユーザールールに「完了時に通知」を追加して、繰り返しの指示を避けます。
+> - クライアント設定で **MCP 自動実行を許可** してください。
+> - **ユーザールール** または **ルールファイル** に「完了時に通知」プロンプトを追加すると、反復的な手動プロンプトを避けることができます。
 
-### 手動インストール
+### ⚡️ クイックスタート
 
-#### MacOS / Linux / WSL2
+[![クリックインストール-Cursor](https://img.shields.io/badge/クリック_インストール-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![クリックインストール-VS_Code](https://img.shields.io/badge/クリック_インストール-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![クリックインストール-VS_Code_Insiders](https://img.shields.io/badge/クリック_インストール-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-<details open>
-<summary>クリックして展開</summary>
+#### smithery.ai 紹介
+
+- shttpモード：MCPをクラウドで実行し、認証、TLS暗号化、キーホスティングをすべて代行します。ローカル設定不要、漏洩リスクゼロ、ブラウザからいつでもどこでも安全にアクセス可能です。
+- stdioモード：Claude Desktop、Cursor、Windsurfなど主要クライアントにワンクリックでインストール可能、すぐに使用できます。
+
+> 詳細については[Smitheryサーバーへのワンクリック接続](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)をお読みください。
+
+### ⚙️ 手動インストール
+
+#### MacOS、Linux、WSL2
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest"]
+      "args": ["-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
-
 #### Windows
-
-<details>
-<summary>クリックして展開</summary>
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "message-mcp@latest"]
+      "args": ["/c", "npx", "-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
+### 🎛️ オプション設定
 
-#### カスタムサウンド通知設定（オプション）
-
-<details>
-<summary>クリックして展開</summary>
-
-カスタムサウンド通知を利用したい場合は、サウンドファイルパスの設定パラメータを追加してください：
+#### デスクトップ通知の変更
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "DISABLE_DESKTOP": "true",
+        "SOUND_PATH": "/path/to/your/sound.mp3"
+      }
     }
   }
 }
 ```
 
-**デフォルトカスタムサウンド**: デフォルトサウンドは [zapsplat.com](https://zapsplat.com/) から提供されます。デフォルトカスタムサウンドが気に入らない場合は、このWebサイトからダウンロードして設定できます。
+> - デスクトップ通知はデフォルトで有効
+> - デフォルトサウンドはzapsplatが提供しています。デフォルトサウンドが気に入らない場合は、[zapsplat.com](https://zapsplat.com/)からダウンロードして設定できます。
 
-</details>
+#### ntfyモバイル通知
 
-#### ntfyモバイル通知設定（オプション）
-
-<details>
-<summary>クリックして展開</summary>
-
-ntfyモバイル通知を利用したい場合は、トピック設定パラメータを追加してください：
+アプリインストール：[App Store](https://apps.apple.com/us/app/ntfy/id1625396347)、[Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)、[F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "NTFY_TOPIC": "your-unique-topic"
+      }
     }
   }
 }
 ```
 
-**ntfyアプリダウンロードリンク:**
-
-- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
-- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
-- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
-
-</details>
-
-#### メール通知設定（オプション）
-
-<details>
-<summary>クリックして展開</summary>
-
-メール通知を利用したい場合は、SMTP URL設定パラメータを追加してください：
+#### メール通知
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": [
-        "message-mcp@latest",
-        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
-      ]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "SMTP_HOST": "smtp.gmail.com",
+        "SMTP_PORT": "587",
+        "SMTP_SECURE": "false",
+        "SMTP_USER": "user@gmail.com",
+        "SMTP_PASS": "your_password"
+      }
     }
   }
 }
 ```
 
-**主なSMTP URL例：**
-
-- **Gmail**：`smtp://user:pass@smtp.gmail.com:587`
-- **Outlook**：`smtp://user:pass@smtp-mail.outlook.com:587`
-- **Yahoo**：`smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQメール**：`smtps://user:pass@smtp.qq.com:465`
-
-</details>
-
-#### API通知設定（オプション）
-
-<details>
-<summary>クリックして展開</summary>
-
-API通知を利用したい場合は、API URL設定パラメータを追加してください：
+#### API通知
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--api-url=https://httpbin.org/post"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "API_URL": "https://httpbin.org/post",
+        "API_METHOD": "POST",
+        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+      }
     }
   }
 }
 ```
-
-</details>
 
 ## 📌 システム要件
 
-- Node.js: 18以降
-- macOS: ネイティブ通知にはバージョン10.8以上が必要
-- Linux: notify-osdまたはlibnotify-binがインストールされている必要があります（Ubuntuはデフォルトで含む）
-- Windows: 8以上、または8未満はタスクバルーン通知
+- Node.js：18以上
+- macOS：ネイティブ通知には10.8以上が必要
+- Linux：notify-osdまたはlibnotify-binのインストールが必要（Ubuntuはデフォルトで含む）
+- Windows：8以上、または8未満はタスクバルーン通知
 
-## ⚡ トラブルシューティング
+## ❗️ トラブルシューティング
 
-#### Windows システム通知が無効
+#### Windowsシステム通知が有効になっていない
 
 設定 > 通知とアクション > アプリやその他の送信者からの通知を受け取る → 有効化
 
-#### WSL2（Ubuntu）には通知音がありません
+#### WSL2（Ubuntu）に通知音がありません
 
 ```bash
 sudo apt install -y pulseaudio mpg123
 ```
 
-#### WSL2 環境でOS通知が不足
+#### WSL2環境でOS通知が不足
 
 ```bash
 sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
@@ -212,3 +190,15 @@ sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
 
 chmod +x /path/to/.../node_modules/snoretoast-*.exe
 ```
+
+```bash
+sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
+/path/to/.../node_modules/snoretoast-x64.exe
+/path/to/.../node_modules/snoretoast-x86.exe
+
+chmod +x /path/to/.../node_modules/snoretoast-*.exe
+```
+
+---
+
+このプロジェクトがお役に立った場合は、⭐️を押してサポートし、より多くの人に見てもらいましょう！

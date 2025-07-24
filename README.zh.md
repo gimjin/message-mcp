@@ -6,15 +6,12 @@
     <a href="README.ko.md">한국어</a> |
     <a href="README.ja.md">日本語</a>
   </p>
-  <h3>桌面通知、个性声音、ntfy 手机应用通知、邮件通知和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
+  <h3>桌面通知、个性化声音、ntfy 手机应用通知、邮件通知和 API 推送，减少 AI 任务等待焦虑，舒适地享用一杯咖啡。​</h3>
   <a href="https://modelcontextprotocol.io">
     <img src="https://img.shields.io/badge/MCP-Server-gold?labelColor=wheat&color=limegreen" title="MCP Server"/>
   </a>
   <a href="https://deepwiki.com/gimjin/message-mcp">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
-  </a>
-  <a href="https://smithery.ai/server/@gimjin/message-mcp">
-    <img src="https://smithery.ai/badge/@gimjin/message-mcp" alt="smithery badge">
   </a>
   <a href="https://dash.cloudflare.com">
     <img src="https://message-mcp-werker.kimseongrim.workers.dev/visit-count.svg?v=5" title="Visit Count"/>
@@ -36,153 +33,134 @@
 
 **Message MCP 让你彻底解放注意力！**
 
-## 💡 使用方法
+```text
+🧑：做一款俄罗斯方块网页游戏，完成后通知。
+🤖：我将开始做俄罗斯方块游戏
+   ...
+💬：Message MCP 执行，已发送信息
+```
 
-[![安装_MCP-Cursor](https://img.shields.io/badge/安装_MCP-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![安装_MCP-VS_Code](https://img.shields.io/badge/安装_MCP-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![安装_MCP-VS_Code_Insiders](https://img.shields.io/badge/安装_MCP-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]})
-
-🧑 **用户**：做一款俄罗斯方块网页游戏，**_完成后通知_**。  
-🤖 **AI**：我将开始做俄罗斯方块游戏...
-
-> ⚠️ 通常 MCP 客户端需要设置
+> [!TIP]
 >
-> - 启用自动运行，允许 MCP 自动执行。
-> - 用户规则添加 “完成后通知” 可避免重复指令。
+> - 在客户端设置里 **允许 MCP 自动执行**。
+> - 在 **用户规则** 或 **规则文件** 中加入 “完成后通知” 提示，即可避免重复手动提示。
 
-### 手动安装
+### ⚡️ 快速使用
 
-#### MacOS / Linux / WSL2
+[![点击安装-Cursor](https://img.shields.io/badge/点击安装-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![点击安装-VS_Code](https://img.shields.io/badge/点击安装-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![点击安装-VS_Code_Insiders](https://img.shields.io/badge/点击安装-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-<details open>
-<summary>点击展开</summary>
+#### smithery.ai 介绍
+
+- shttp 模式：把 MCP 跑在云端，身份验证、TLS 加密、密钥托管全帮你搞定，本地零配置、零泄露风险，随时随地在浏览器里安全调用。
+- stdio 模式：一键即可装进 Claude Desktop、Cursor、Windsurf 等主流客户端，开箱即用。
+
+> 了解更多请阅读 [一键连接到 Smithery 服务器](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)。
+
+### ⚙️ 手动安装
+
+#### MacOS、Linux、WSL2
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest"]
+      "args": ["-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
-
 #### Windows
-
-<details>
-<summary>点击展开</summary>
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "cmd",
-      "args": ["/c", "npx", "message-mcp@latest"]
+      "args": ["/c", "npx", "-y", "message-mcp@latest"]
     }
   }
 }
 ```
 
-</details>
+### 🎛️ 可选配置
 
-#### 个性声音通知配置（可选）
-
-<details>
-<summary>点击展开</summary>
-
-如果您想使用自定义声音通知功能，请添加声音文件路径配置参数：
+#### 修改桌面通知
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--sound-path=/path/to/your/sound.mp3"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "DISABLE_DESKTOP": "true",
+        "SOUND_PATH": "/path/to/your/sound.mp3"
+      }
     }
   }
 }
 ```
 
-**默认个性声音**：默认声音来自于 [zapsplat.com](https://zapsplat.com/)。如果不喜欢默认个性声音，可以到这个网站下载配置。
+> - 默认已开启桌面通知
+> - 默认声音 zapsplat 提供。如果不喜欢默认声音，可以到 [zapsplat.com](https://zapsplat.com/) 下载配置。
 
-</details>
+#### ntfy 手机通知
 
-#### ntfy 手机端通知配置（可选）
-
-<details>
-<summary>点击展开</summary>
-
-如果您想使用 ntfy 手机端通知功能，请添加 topic 配置参数：
+安装 App：[App Store](https://apps.apple.com/us/app/ntfy/id1625396347)、[Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)、[F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--ntfy-topic=your-unique-topic-name"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "NTFY_TOPIC": "your-unique-topic"
+      }
     }
   }
 }
 ```
 
-**ntfy 应用下载地址：**
-
-- [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
-- [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
-- [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
-
-</details>
-
-#### 邮件通知配置（可选）
-
-<details>
-<summary>点击展开</summary>
-
-如果您想使用邮件通知功能，请添加 SMTP URL 配置参数：
+#### 邮件通知
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": [
-        "message-mcp@latest",
-        "--smtp-url=smtp://user@gmail.com:pass@smtp.gmail.com:587"
-      ]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "SMTP_HOST": "smtp.gmail.com",
+        "SMTP_PORT": "587",
+        "SMTP_SECURE": "false",
+        "SMTP_USER": "user@gmail.com",
+        "SMTP_PASS": "your_password"
+      }
     }
   }
 }
 ```
 
-**常见 SMTP URL 配置示例：**
-
-- **Gmail**: `smtp://user@:pass@smtp.gmail.com:587`
-- **Outlook**: `smtp://user:pass@smtp-mail.outlook.com:587`
-- **Yahoo**: `smtp://user:pass@smtp.mail.yahoo.com:587`
-- **QQ邮箱**: `smtps://user:pass@smtp.qq.com:465`
-
-</details>
-
-#### API 通知配置（可选）
-
-<details>
-<summary>点击展开</summary>
-
-如果您想使用 API 通知功能，请添加 API URL 配置参数：
+#### API 通知
 
 ```json
 {
   "mcpServers": {
     "message-mcp": {
       "command": "npx",
-      "args": ["message-mcp@latest", "--api-url=https://httpbin.org/post"]
+      "args": ["-y", "message-mcp@latest"],
+      "env": {
+        "API_URL": "https://httpbin.org/post",
+        "API_METHOD": "POST",
+        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+      }
     }
   }
 }
 ```
-
-</details>
 
 ## 📌 系统要求
 
@@ -191,7 +169,7 @@
 - Linux：需要安装 notify-osd 或 libnotify-bin（Ubuntu 默认包含）
 - Windows：>= 8 版本，或 Windows < 8 的任务栏气球提示
 
-## ⚡ 解决异常问题
+## ❗️ 解决异常问题
 
 #### Windows 系统通知未启用
 
@@ -212,3 +190,7 @@ sudo find / -type f -name "snoretoast-*.exe" 2>/dev/null
 
 chmod +x /path/to/.../node_modules/snoretoast-*.exe
 ```
+
+---
+
+如果这个项目对你有帮助，请给个 ⭐️ 支持一下，让更多人看到它！

@@ -1,6 +1,6 @@
 {
   "name": "message-mcp",
-  "description": "Desktop notifications, emails, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.",
+  "description": "Desktop notifications, custom sounds, ntfy mobile notifications, email notifications, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.",
   "version": "1.3.1",
   "license": "MIT",
   "keywords": [
@@ -27,16 +27,21 @@
     "url": "https://github.com/gimjin/message-mcp/issues"
   },
   "type": "module",
+  "module": "./src/index.ts",
   "bin": {
-    "message-mcp": "./build/index.js"
+    "message-mcp": "./.smithery/index.cjs"
   },
   "scripts": {
-    "build": "node esbuild.config.js && chmod 755 build/index.js",
-    "prepublishOnly": "pnpm build",
+    "dev": "npx -y @smithery/cli@latest dev",
+    "build:shttp": "npx -y @smithery/cli@latest build --transport shttp",
+    "build:stdio": "npx -y @smithery/cli@latest build --transport stdio",
+    "build": "pnpm build:shttp",
+    "prepublishOnly": "pnpm build:stdio",
+    "inspector": "npx -y @modelcontextprotocol/inspector node .smithery/index.cjs",
     "prepare": "husky"
   },
   "files": [
-    "build"
+    ".smithery"
   ],
   "engines": {
     "node": "^22.16.0",
@@ -44,7 +49,6 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
-    "arg": "^5.0.2",
     "node-notifier": "^10.0.1",
     "nodemailer": "^7.0.4",
     "play-sound": "^1.1.6",
@@ -60,13 +64,12 @@
     "@types/nodemailer": "^6.4.17",
     "@types/play-sound": "^1.1.2",
     "@types/rfc2047": "^2.0.3",
-    "esbuild": "^0.25.6",
-    "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.1"
   }
