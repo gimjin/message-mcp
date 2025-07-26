@@ -45,16 +45,11 @@
 > - クライアント設定で **MCP 自動実行を許可** してください。
 > - **ユーザールール** または **ルールファイル** に「完了時に通知」プロンプトを追加すると、反復的な手動プロンプトを避けることができます。
 
-### ⚡️ クイックスタート
+### ⚡️ クイックインストール
 
 [![クリックインストール-Cursor](https://img.shields.io/badge/クリック_インストール-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![クリックインストール-VS_Code](https://img.shields.io/badge/クリック_インストール-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![クリックインストール-VS_Code_Insiders](https://img.shields.io/badge/クリック_インストール-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-#### smithery.ai 紹介
-
-- shttpモード：MCPをクラウドで実行し、認証、TLS暗号化、キーホスティングをすべて代行します。ローカル設定不要、漏洩リスクゼロ、ブラウザからいつでもどこでも安全にアクセス可能です。
-- stdioモード：Claude Desktop、Cursor、Windsurfなど主要クライアントにワンクリックでインストール可能、すぐに使用できます。
-
-> 詳細については[Smitheryサーバーへのワンクリック接続](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)をお読みください。
+> smithery.aiはMessage MCPクラウド実行をサポートし、認証とキーホスティングを自動的に処理し、漏洩リスクはゼロです。Cursorなど主要クライアントとのワンクリック統合が可能で、すぐに使用でき、Difyなどクラウドサービスの展開もサポートします。[詳細はこちら](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ 手動インストール
 
@@ -154,12 +149,26 @@
       "args": ["-y", "message-mcp@latest"],
       "env": {
         "API_URL": "https://httpbin.org/post",
-        "API_METHOD": "POST",
+        "API_METHOD": "POST", // POST, PUT, PATCH
         "API_HEADERS": "{\"Authorization\": \"Token\"}"
       }
     }
   }
 }
+```
+
+```javascript
+fetch(API_URL, {
+  method: API_METHOD,
+  headers: {
+    'Content-Type': 'application/json'
+    ...JSON.parse(API_HEADERS)
+  },
+  body: JSON.stringify({
+    title: notifyTitle,
+    message: notifyMessage,
+  }),
+})
 ```
 
 ## 📌 システム要件

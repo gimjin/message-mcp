@@ -1,6 +1,41 @@
 import { exec } from 'child_process'
 import { promisify } from 'util'
 
+export function getBoolean(value?: string | boolean): boolean {
+  if (typeof value === 'boolean') {
+    return value
+  }
+  if (typeof value === 'string') {
+    return value.toLowerCase() === 'true' || value === '1'
+  }
+  return false
+}
+
+const API_METHODS = ['POST', 'PUT', 'PATCH'] as const
+export type ApiMethod = (typeof API_METHODS)[number]
+export function getApiMethod(method?: string): ApiMethod {
+  if (!method) return 'POST'
+
+  const upperCaseMethod = method.toUpperCase()
+  return API_METHODS.includes(upperCaseMethod as ApiMethod)
+    ? (upperCaseMethod as ApiMethod)
+    : 'POST'
+}
+
+export function getHeaders(headers?: string): HeadersInit {
+  if (!headers) return {}
+
+  try {
+    const parsed = JSON.parse(headers)
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed)
+      ? parsed
+      : {}
+  } catch (error) {
+    console.error('Invalid headers format, using empty headers:', error)
+    return {}
+  }
+}
+
 const execAsync = promisify(exec)
 
 // Fix nodejs fetch issue: https://github.com/nodejs/node/issues/54359#issuecomment-2288886190
@@ -9,7 +44,7 @@ export async function universalRequest(
   url: string,
   options: RequestInit = {},
 ): Promise<Response> {
-  const { method = 'GET', body, headers } = options
+  const { method, body, headers } = options
 
   // First try using fetch
   try {
@@ -55,7 +90,7 @@ async function curlRequest(
   url: string,
   options: RequestInit,
 ): Promise<Response> {
-  const { method = 'GET', body, headers } = options
+  const { method, body, headers } = options
 
   let curlCommand = `curl -s -X ${method}`
 
@@ -118,7 +153,7 @@ async function powershellRequest(
   url: string,
   options: RequestInit,
 ): Promise<Response> {
-  const { method = 'GET', body, headers } = options
+  const { method, body, headers } = options
 
   // Check PowerShell availability
   const psCommand = await getPowerShellCommand()

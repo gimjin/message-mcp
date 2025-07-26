@@ -45,16 +45,11 @@
 > - 在客户端设置里 **允许 MCP 自动执行**。
 > - 在 **用户规则** 或 **规则文件** 中加入 “完成后通知” 提示，即可避免重复手动提示。
 
-### ⚡️ 快速使用
+### ⚡️ 快速安装
 
 [![点击安装-Cursor](https://img.shields.io/badge/点击安装-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![点击安装-VS_Code](https://img.shields.io/badge/点击安装-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![点击安装-VS_Code_Insiders](https://img.shields.io/badge/点击安装-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-#### smithery.ai 介绍
-
-- shttp 模式：把 MCP 跑在云端，身份验证、TLS 加密、密钥托管全帮你搞定，本地零配置、零泄露风险，随时随地在浏览器里安全调用。
-- stdio 模式：一键即可装进 Claude Desktop、Cursor、Windsurf 等主流客户端，开箱即用。
-
-> 了解更多请阅读 [一键连接到 Smithery 服务器](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)。
+> smithery.ai 支持 Message MCP 云端执行，自动处理身份验证与密钥托管，零泄露风险。一键即可集成 Cursor 等主流客户端，开箱即用，也支持 Dify 等云服务部署。[了解更多](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ 手动安装
 
@@ -154,12 +149,26 @@
       "args": ["-y", "message-mcp@latest"],
       "env": {
         "API_URL": "https://httpbin.org/post",
-        "API_METHOD": "POST",
+        "API_METHOD": "POST", // POST, PUT, PATCH
         "API_HEADERS": "{\"Authorization\": \"Token\"}"
       }
     }
   }
 }
+```
+
+```javascript
+fetch(API_URL, {
+  method: API_METHOD,
+  headers: {
+    'Content-Type': 'application/json'
+    ...JSON.parse(API_HEADERS)
+  },
+  body: JSON.stringify({
+    title: notifyTitle,
+    message: notifyMessage,
+  }),
+})
 ```
 
 ## 📌 系统要求
