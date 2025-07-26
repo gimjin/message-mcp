@@ -45,16 +45,11 @@ Like a worried boss, staring at AI output line by line, clearly able to handle o
 > - **Allow MCP auto-execution** in client settings.
 > - Add "notify when completed" prompts in **user rules** or **rule files** to avoid repetitive manual prompts.
 
-### ⚡️ Quick Start
+### ⚡️ Quick Installation
 
 [![Click_Install-Cursor](https://img.shields.io/badge/Click_Install-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Click_Install-VS_Code](https://img.shields.io/badge/Click_Install-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Click_Install-VS_Code_Insiders](https://img.shields.io/badge/Click_Install-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-#### smithery.ai Introduction
-
-- shttp mode: Run MCP in the cloud with authentication, TLS encryption, and key hosting all handled for you. Zero local configuration, zero leakage risk, secure calling from anywhere in the browser.
-- stdio mode: One-click installation into mainstream clients like Claude Desktop, Cursor, Windsurf, and more. Ready to use out of the box.
-
-> Learn more by reading [One-click Connect to Smithery Servers](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers).
+> smithery.ai supports Message MCP cloud execution, automatically handling authentication and key hosting with zero leakage risk. One-click integration with mainstream clients like Cursor, ready to use out of the box, and also supports cloud service deployment like Dify. [Learn more](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ Manual Installation
 
@@ -154,12 +149,26 @@ Install App: [App Store](https://apps.apple.com/us/app/ntfy/id1625396347), [Goog
       "args": ["-y", "message-mcp@latest"],
       "env": {
         "API_URL": "https://httpbin.org/post",
-        "API_METHOD": "POST",
+        "API_METHOD": "POST", // POST, PUT, PATCH
         "API_HEADERS": "{\"Authorization\": \"Token\"}"
       }
     }
   }
 }
+```
+
+```javascript
+fetch(API_URL, {
+  method: API_METHOD,
+  headers: {
+    'Content-Type': 'application/json'
+    ...JSON.parse(API_HEADERS)
+  },
+  body: JSON.stringify({
+    title: notifyTitle,
+    message: notifyMessage,
+  }),
+})
 ```
 
 ## 📌 System Requirements
