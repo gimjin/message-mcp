@@ -35,8 +35,8 @@
     "dev": "npx -y @smithery/cli@latest dev",
     "build:shttp": "npx -y @smithery/cli@latest build --transport shttp",
     "build:stdio": "npx -y @smithery/cli@latest build --transport stdio",
-    "build": "pnpm build:shttp",
-    "prepublishOnly": "pnpm build:stdio",
+    "build": "npm run build:shttp",
+    "prepublishOnly": "npm run build:stdio",
     "inspector": "npx -y @modelcontextprotocol/inspector node .smithery/index.cjs",
     "prepare": "husky"
   },
@@ -45,7 +45,7 @@
   ],
   "engines": {
     "node": "^22.16.0",
-    "pnpm": "^10.12.1"
+    "npm": "^10.9.2"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
