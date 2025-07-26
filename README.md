@@ -26,6 +26,9 @@
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
   </a>
 </div>
+<a href="https://glama.ai/mcp/servers/@gimjin/message-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@gimjin/message-mcp/badge" alt="message-mcp MCP server" />
+</a>
 
 ## 🤔 Are you still using AI in this "micromanaging" way?
 
