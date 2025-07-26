@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.3.1...message-mcp-v2.0.0) (2025-07-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* support shttp and stdio protocols MCP server, change args to env config
+
+### Features
+
+* support shttp and stdio protocols MCP server, change args to env config ([4ba0b25](https://github.com/gimjin/message-mcp/commit/4ba0b25e21cc4e42b8e6e4abda30b9cab36ea986))
+
 ## [1.3.1](https://github.com/gimjin/message-mcp/compare/message-mcp-v1.3.0...message-mcp-v1.3.1) (2025-07-16)
 
 
