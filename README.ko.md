@@ -27,17 +27,17 @@
   </a>
 </div>
 
-## 🤔 아직도 이런 "감시식"으로 AI를 사용하고 계신가요?
+## 🚀 AI 사용 효율성을 높이고 더 많은 시간을 확보하세요
 
-걱정스러운 상사처럼 AI 출력을 한 줄씩 응시하며, 분명히 다른 일을 처리할 수 있음에도 불구하고 화면에서 잠시도 떨어질 수 없어 하고 있습니다.
+AI가 작업을 완료하기를 기다리는 동안 다른 업무를 동시에 처리할 수 있기를 바라시나요? 이제 AI가 장시간 작업을 실행하는 동안 안심하고 다른 일들을 처리할 수 있습니다.
 
-**Message MCP로 완전히 주의력을 해방시켜 보세요!**
+**Message MCP로 AI 협업을 더욱 효율적으로 만들어보세요!**
 
 ```text
 🧑: 테트리스 웹 게임을 만들어 주세요, 완료 시 알림.
 🤖: 테트리스 게임을 만들기 시작하겠습니다
    ...
-💬: Message MCP 실행됨, 메시지 전송 완료
+💬: Message MCP 실행됨, 메시지 전송 완료.
 ```
 
 > [!TIP]
@@ -49,9 +49,9 @@
 
 [![클릭_설치-Cursor](https://img.shields.io/badge/클릭_설치-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![클릭_설치-VS_Code](https://img.shields.io/badge/클릭_설치-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![클릭_설치-VS_Code_Insiders](https://img.shields.io/badge/클릭_설치-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> smithery.ai는 Message MCP 클라우드 실행을 지원하며, 인증 및 키 호스팅을 자동으로 처리하여 유출 위험이 전혀 없습니다. Cursor 등 주요 클라이언트와 원클릭 통합이 가능하고, 즉시 사용 가능하며, Dify 등 클라우드 서비스 배포도 지원합니다. [자세히 알아보기](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> smithery.ai를 통해 Message MCP 클라우드 실행을 지원하며, Dify 등 SaaS 서비스를 지원하고 자동 인증 및 키 호스팅으로 유출 위험이 전혀 없습니다. [자세히 알아보기](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
-### ⚙️ 수동 설치
+### ⚙️ 표준 설치
 
 #### MacOS, Linux, WSL2
 
@@ -150,7 +150,7 @@
       "env": {
         "API_URL": "https://httpbin.org/post",
         "API_METHOD": "POST", // POST, PUT, PATCH
-        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+        "API_HEADERS": "{\"Authorization\": \"Bearer token\"}"
       }
     }
   }

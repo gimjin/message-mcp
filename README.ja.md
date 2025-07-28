@@ -27,17 +27,17 @@
   </a>
 </div>
 
-## 🤔 まだこんな「監視式」でAIを使っていますか？
+## 🚀 AI の使用効率を向上させ、より多くの時間を確保
 
-心配な上司のように、AIの出力を一行一行見つめて、明らかに他のことを処理できるのに、頑固に画面から一瞬も離れられない。
+AIがタスクを完了するのを待っている間、他の作業を同時に処理できればと思いませんか？今では、AIが長時間のタスクを実行している間、安心して他の作業を処理できます。
 
-**Message MCPで完全に注意力を解放しましょう！**
+**Message MCPでAIとのコラボレーションをより効率的にしましょう！**
 
 ```text
 🧑：テトリスのWebゲームを作って、完了時に通知。
 🤖：テトリスゲームの作成を開始します
    ...
-💬：Message MCP実行、メッセージ送信完了
+💬：Message MCP実行、メッセージ送信完了。
 ```
 
 > [!TIP]
@@ -49,9 +49,9 @@
 
 [![クリックインストール-Cursor](https://img.shields.io/badge/クリック_インストール-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![クリックインストール-VS_Code](https://img.shields.io/badge/クリック_インストール-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![クリックインストール-VS_Code_Insiders](https://img.shields.io/badge/クリック_インストール-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> smithery.aiはMessage MCPクラウド実行をサポートし、認証とキーホスティングを自動的に処理し、漏洩リスクはゼロです。Cursorなど主要クライアントとのワンクリック統合が可能で、すぐに使用でき、Difyなどクラウドサービスの展開もサポートします。[詳細はこちら](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> smithery.aiを通じてMessage MCPクラウド実行を実現し、DifyなどのSaaSサービスをサポートし、自動認証とキーホスティングで漏洩リスクを確実にゼロにします。[詳細はこちら](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
-### ⚙️ 手動インストール
+### ⚙️ 標準インストール
 
 #### MacOS、Linux、WSL2
 
@@ -150,7 +150,7 @@
       "env": {
         "API_URL": "https://httpbin.org/post",
         "API_METHOD": "POST", // POST, PUT, PATCH
-        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+        "API_HEADERS": "{\"Authorization\": \"Bearer token\"}"
       }
     }
   }

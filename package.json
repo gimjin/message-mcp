@@ -27,25 +27,21 @@
     "url": "https://github.com/gimjin/message-mcp/issues"
   },
   "type": "module",
-  "module": "./src/index.ts",
   "bin": {
-    "message-mcp": "./.smithery/index.cjs"
+    "message-mcp": "./build/index.js"
   },
   "scripts": {
-    "dev": "npx -y @smithery/cli@latest dev",
-    "build:shttp": "npx -y @smithery/cli@latest build --transport shttp",
-    "build:stdio": "npx -y @smithery/cli@latest build --transport stdio",
-    "build": "npm run build:shttp",
-    "prepublishOnly": "npm run build:stdio",
-    "inspector": "npx -y @modelcontextprotocol/inspector node .smithery/index.cjs",
+    "build": "node esbuild.config.js && chmod 755 build/index.js",
+    "prepublishOnly": "pnpm build",
+    "inspector": "pnpm dlx @modelcontextprotocol/inspector node build/index.js",
     "prepare": "husky"
   },
   "files": [
-    ".smithery"
+    "build"
   ],
   "engines": {
     "node": "^22.16.0",
-    "npm": "^10.9.2"
+    "pnpm": "^10.12.1"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
@@ -64,12 +60,13 @@
     "@types/nodemailer": "^6.4.17",
     "@types/play-sound": "^1.1.2",
     "@types/rfc2047": "^2.0.3",
+    "esbuild": "^0.25.8",
+    "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
-    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.1"
   }
