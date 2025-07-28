@@ -14,8 +14,8 @@ startCommand:
         type: 'string'
         description: 'SMTP server port'
       SMTP_SECURE:
-        type: 'boolean'
-        description: 'Use secure connection for SMTP'
+        type: 'string'
+        description: 'Use secure connection for SMTP (true/false)'
       SMTP_USER:
         type: 'string'
         description: 'SMTP username'
@@ -41,7 +41,7 @@ startCommand:
         NTFY_TOPIC: config.NTFY_TOPIC,
         SMTP_HOST: config.SMTP_HOST,
         SMTP_PORT: config.SMTP_PORT,
-        SMTP_SECURE: String(config.SMTP_SECURE || false),
+        SMTP_SECURE: config.SMTP_SECURE,
         SMTP_USER: config.SMTP_USER,
         SMTP_PASS: config.SMTP_PASS,
         API_URL: config.API_URL,
