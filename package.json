@@ -1,7 +1,7 @@
 {
   "name": "message-mcp",
   "description": "Desktop notifications, custom sounds, ntfy mobile notifications, email notifications, and API pushes reduce anxiety while waiting for AI tasks, allowing you to comfortably enjoy a cup of coffee.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "keywords": [
     "mcp",

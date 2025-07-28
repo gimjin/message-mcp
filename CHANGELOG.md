@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.1...message-mcp-v2.0.2) (2025-07-28)
+
+
+### Bug Fixes
+
+* no audio on desktop, build with esbuild ([bb00695](https://github.com/gimjin/message-mcp/commit/bb006955f0ffcafc1265fc3210a42f236be3a491))
+
 ## [2.0.1](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.0...message-mcp-v2.0.1) (2025-07-26)
 
 
