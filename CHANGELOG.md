@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.2...message-mcp-v2.0.3) (2025-07-28)
+
+
+### Bug Fixes
+
+* deploy smithery.ai invalid configuration ([4441f13](https://github.com/gimjin/message-mcp/commit/4441f1386ea1cf7a2e14b6b3240e940b4d0dae2e))
+
 ## [2.0.2](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.1...message-mcp-v2.0.2) (2025-07-28)
 
 
