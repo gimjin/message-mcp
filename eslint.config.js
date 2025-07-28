@@ -4,7 +4,7 @@ import typescriptEslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default typescriptEslint.config(
-  { ignores: ['**/dist'] },
+  { ignores: ['node_modules', 'build'] },
   {
     extends: [
       eslint.configs.recommended,

@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,vim,node,linux,macos,windows,webstorm,sublimetext,visualstudiocode
 
 ### Custom ###
-.smithery/
+build/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:

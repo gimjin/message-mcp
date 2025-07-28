@@ -27,17 +27,17 @@
   </a>
 </div>
 
-## 🤔 你还在这样 “监工式” 地使用 AI 吗？
+## 🚀 提升 AI 使用效率，释放更多时间
 
-像个不放心的老板，盯着 AI 输出一行行跳动，明明可以去处理别的事，却偏偏一刻都离不开屏幕。
+等待 AI 完成任务时，您是否希望能同时处理其他工作？现在可以在 AI 执行长时间任务时，安心去处理其他事务。
 
-**Message MCP 让你彻底解放注意力！**
+**Message MCP 让您的 AI 协作更高效！**
 
 ```text
 🧑：做一款俄罗斯方块网页游戏，完成后通知。
 🤖：我将开始做俄罗斯方块游戏
    ...
-💬：Message MCP 执行，已发送信息
+💬：Message MCP 执行，已发送信息。
 ```
 
 > [!TIP]
@@ -49,9 +49,9 @@
 
 [![点击安装-Cursor](https://img.shields.io/badge/点击安装-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![点击安装-VS_Code](https://img.shields.io/badge/点击安装-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![点击安装-VS_Code_Insiders](https://img.shields.io/badge/点击安装-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> smithery.ai 支持 Message MCP 云端执行，自动处理身份验证与密钥托管，零泄露风险。一键即可集成 Cursor 等主流客户端，开箱即用，也支持 Dify 等云服务部署。[了解更多](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> 通过 smithery.ai 实现 Message MCP 云端执行，支持 Dify 等 SaaS 服务，自动处理身份验证与密钥托管，确保零泄露风险。[了解更多](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
-### ⚙️ 手动安装
+### ⚙️ 标准安装
 
 #### MacOS、Linux、WSL2
 
@@ -150,7 +150,7 @@
       "env": {
         "API_URL": "https://httpbin.org/post",
         "API_METHOD": "POST", // POST, PUT, PATCH
-        "API_HEADERS": "{\"Authorization\": \"Token\"}"
+        "API_HEADERS": "{\"Authorization\": \"Bearer token\"}"
       }
     }
   }
