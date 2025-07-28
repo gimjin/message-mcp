@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.3...message-mcp-v2.0.4) (2025-07-28)
+
+
+### Bug Fixes
+
+* unable to publish version ([385a82a](https://github.com/gimjin/message-mcp/commit/385a82a5ea65abc3cc36bed9c0f0fc07b1633e8c))
+
 ## [2.0.3](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.2...message-mcp-v2.0.3) (2025-07-28)
 
 
