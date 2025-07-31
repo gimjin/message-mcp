@@ -6,7 +6,7 @@ startCommand:
     properties:
       NTFY_TOPIC:
         type: 'string'
-        description: 'Notification topic for ntfy app'
+        description: 'Mobile ntfy app topic'
       SMTP_HOST:
         type: 'string'
         description: 'SMTP server host'
@@ -15,7 +15,7 @@ startCommand:
         description: 'SMTP server port'
       SMTP_SECURE:
         type: 'string'
-        description: 'Use secure connection for SMTP (true/false)'
+        description: 'SMTP secure connection (true, false)'
       SMTP_USER:
         type: 'string'
         description: 'SMTP username'
@@ -24,19 +24,19 @@ startCommand:
         description: 'SMTP password'
       API_URL:
         type: 'string'
-        description: 'API endpoint URL'
+        description: 'API URL'
       API_HEADERS:
         type: 'string'
         description: 'API headers in JSON string'
       API_METHOD:
         type: 'string'
-        description: 'HTTP method for API requests (POST, PUT, PATCH)'
+        description: 'API method (POST, PUT, PATCH)'
   commandFunction:
     # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
     |-
     (config) => ({
       command: 'node',
-      args: ['build/index.js'],
+      args: ['build/index.js', '--shttp'],
       env: {
         NTFY_TOPIC: config.NTFY_TOPIC,
         SMTP_HOST: config.SMTP_HOST,
@@ -50,7 +50,7 @@ startCommand:
       },
     })
   exampleConfig:
-    NTFY_TOPIC: 'your-unique-topic'
+    NTFY_TOPIC: 'your-topic'
     SMTP_HOST: 'smtp.gmail.com'
     SMTP_PORT: '587'
     SMTP_SECURE: 'false'
@@ -59,5 +59,3 @@ startCommand:
     API_URL: 'https://httpbin.org/post'
     API_HEADERS: '{"Authorization": "Bearer token"}'
     API_METHOD: 'POST'
-env:
-  DISABLE_DESKTOP: 'true'
