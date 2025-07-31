@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.4...message-mcp-v2.0.5) (2025-07-31)
+
+
+### Bug Fixes
+
+* added '--shttp' command line option to enable streamable HTTP server mode ([7472322](https://github.com/gimjin/message-mcp/commit/74723228be4c95da758f884526f5332e66e3fd71))
+
 ## [2.0.4](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.3...message-mcp-v2.0.4) (2025-07-28)
 
 
