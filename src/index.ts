@@ -1,5 +1,8 @@
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { setDefaultAutoSelectFamilyAttemptTimeout } from 'net'
+import { up } from 'up-fetch'
+import { Command } from 'commander'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod'
@@ -7,14 +10,27 @@ import rfc2047 from 'rfc2047'
 import play from 'play-sound'
 import nodemailer from 'nodemailer'
 import notifier from 'node-notifier'
-import {
-  universalRequest,
-  getBoolean,
-  getApiMethod,
-  getHeaders,
-} from './utils.js'
+import { getBoolean, getApiMethod, getHeaders } from './utils.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Parse command line arguments
+const program = new Command()
+program
+  .name(process.env.MCP_NAME!)
+  .description(process.env.MCP_DESCRIPTION!)
+  .version(process.env.MCP_VERSION!)
+  .option('--shttp', 'Streamable HTTP server mode running')
+  .parse(process.argv)
+
+const options = program.opts()
+
+// https://github.com/nodejs/node/issues/54359
+const fetchTimeout = 5000
+setDefaultAutoSelectFamilyAttemptTimeout(fetchTimeout)
+const upfetch = up(fetch, () => ({
+  timeout: fetchTimeout,
+}))
 
 type MessageMcpConfig = {
   disableDesktop?: boolean
@@ -31,7 +47,7 @@ type MessageMcpConfig = {
 }
 
 const config: MessageMcpConfig = {
-  disableDesktop: getBoolean(process.env.DISABLE_DESKTOP),
+  disableDesktop: getBoolean(options.shttp || process.env.DISABLE_DESKTOP),
   soundPath: process.env.SOUND_PATH,
   ntfyTopic: process.env.NTFY_TOPIC,
   smtpHost: process.env.SMTP_HOST,
@@ -71,7 +87,7 @@ server.registerTool(
     // NTFY notification
     if (config.ntfyTopic) {
       const safeTopic = encodeURIComponent(config.ntfyTopic)
-      allNotifyPromise.ntfy = universalRequest(`https://ntfy.sh/${safeTopic}`, {
+      allNotifyPromise.ntfy = upfetch(`https://ntfy.sh/${safeTopic}`, {
         method: 'POST',
         body: notifyMessage,
         headers: {
@@ -79,14 +95,6 @@ server.registerTool(
           Priority: 'urgent',
         },
       })
-        .then((response) =>
-          response.ok
-            ? 'NTFY notification sent successfully!'
-            : `NTFY notification failed with status: ${response.status}`,
-        )
-        .catch((error) => {
-          throw new Error(`NTFY notification error: ${error.message}`)
-        })
     }
 
     // Email notification
@@ -110,41 +118,19 @@ server.registerTool(
         text: notifyMessage,
       }
 
-      allNotifyPromise.nodemailer = transporter
-        .sendMail(mailOptions)
-        .then((info) => {
-          transporter.close()
-          return `Email sent successfully! Message ID: ${info.messageId}`
-        })
-        .catch((error) => {
-          transporter.close()
-          throw new Error(`Email notification failed: ${error.message}`)
-        })
+      allNotifyPromise.nodemailer = transporter.sendMail(mailOptions)
     }
 
     // API notification
     if (config.apiUrl) {
-      const headers = {
-        'Content-Type': 'application/json',
-        ...config.apiHeaders,
-      }
-
-      allNotifyPromise.api = universalRequest(config.apiUrl, {
+      allNotifyPromise.api = upfetch(config.apiUrl, {
         method: config.apiMethod,
-        headers,
-        body: JSON.stringify({
+        headers: config.apiHeaders,
+        body: {
           title: notifyTitle,
           message: notifyMessage,
-        }),
+        },
       })
-        .then((response) =>
-          response.ok
-            ? 'API notification sent successfully!'
-            : `API notification failed with status: ${response.status}`,
-        )
-        .catch((error) => {
-          throw new Error(`API notification error: ${error.message}`)
-        })
     }
 
     // Desktop play sound notification
@@ -158,15 +144,14 @@ server.registerTool(
         player.play(soundPath, (error) => {
           if (error) {
             reject(error)
-          } else {
-            resolve('Sound notification played successfully!')
           }
         })
+        setTimeout(() => {
+          resolve({
+            message: 'Sound notification played successfully!',
+          })
+        }, 1500)
       })
-        .then((result) => result)
-        .catch((error) => {
-          throw new Error(`Sound notification error: ${error.message}`)
-        })
 
       // Desktop notification
       allNotifyPromise.desktop = new Promise((resolve, reject) => {
@@ -179,16 +164,16 @@ server.registerTool(
           (error) => {
             if (error) {
               reject(error)
-            } else {
-              resolve('Desktop notification sent successfully!')
             }
           },
         )
+
+        setTimeout(() => {
+          resolve({
+            message: 'Desktop notification sent successfully!',
+          })
+        }, 1500)
       })
-        .then((result) => result)
-        .catch((error) => {
-          throw new Error(`Desktop notification error: ${error.message}`)
-        })
     }
 
     // Wait for all notifications to complete
@@ -210,9 +195,23 @@ server.registerTool(
 
     results.forEach((result, i) => {
       const [name] = entries[i]
+      let message = ''
+
+      if (result.status === 'fulfilled') {
+        message =
+          typeof result.value === 'object'
+            ? `successfully! ${JSON.stringify(result.value)}`
+            : 'successfully!'
+      } else {
+        message =
+          result.reason instanceof Error
+            ? `failed! ${result.reason.message}`
+            : 'failed!'
+      }
+
       content.push({
         type: 'text' as const,
-        text: `${name}: ${result.status === 'fulfilled' ? result.value : 'notification failed. ' + (result.reason instanceof Error ? result.reason.message : String(result.reason))}`,
+        text: `${name} ${message}`,
       })
     })
 

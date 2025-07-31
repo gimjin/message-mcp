@@ -10,6 +10,9 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.15.0
         version: 1.17.0
+      commander:
+        specifier: ^14.0.0
+        version: 14.0.0
       node-notifier:
         specifier: ^10.0.1
         version: 10.0.1
@@ -22,6 +25,9 @@ importers:
       rfc2047:
         specifier: ^4.0.1
         version: 4.0.1
+      up-fetch:
+        specifier: ^2.2.0
+        version: 2.2.0
       zod:
         specifier: ^3.25.74
         version: 3.25.76
@@ -2637,6 +2643,13 @@ packages:
       }
     engines: { node: '>= 0.8' }
 
+  up-fetch@2.2.0:
+    resolution:
+      {
+        integrity: sha512-ni9uY+b1EyPXt1zl1H2g/CEDYy35ECmOddPFeSpAFZvLOB2sz5DxCtcbFmznXV12a9MTtqwBo9O0Ilejd8wfog==,
+      }
+    engines: { node: '>=18' }
+
   uri-js@4.4.1:
     resolution:
       {
@@ -4237,6 +4250,8 @@ snapshots:
   universalify@2.0.1: {}
 
   unpipe@1.0.0: {}
+
+  up-fetch@2.2.0: {}
 
   uri-js@4.4.1:
     dependencies:

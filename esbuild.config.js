@@ -21,17 +21,20 @@ await build({
   define: {
     'process.env.MCP_NAME': JSON.stringify(pkg.name),
     'process.env.MCP_VERSION': JSON.stringify(pkg.version),
+    'process.env.MCP_DESCRIPTION': JSON.stringify(pkg.description),
   },
   banner: {
     js: '#!/usr/bin/env node',
   },
   external: [
+    'up-fetch',
+    'commander',
     '@modelcontextprotocol/sdk',
+    'zod',
     'node-notifier',
     'nodemailer',
     'play-sound',
     'rfc2047',
-    'zod',
   ],
   plugins: [
     copy({

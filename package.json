@@ -45,10 +45,12 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
+    "commander": "^14.0.0",
     "node-notifier": "^10.0.1",
     "nodemailer": "^7.0.4",
     "play-sound": "^1.1.6",
     "rfc2047": "^4.0.1",
+    "up-fetch": "^2.2.0",
     "zod": "^3.25.74"
   },
   "devDependencies": {
