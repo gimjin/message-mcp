@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.6](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.5...message-mcp-v2.0.6) (2025-08-01)
+
+
+### Bug Fixes
+
+* update entrypoint to use CMD with '--shttp' option and add example image to README files ([5dbe3e8](https://github.com/gimjin/message-mcp/commit/5dbe3e8a1a1fa8aa5131422ccd32823af5a8fcee))
+
 ## [2.0.5](https://github.com/gimjin/message-mcp/compare/message-mcp-v2.0.4...message-mcp-v2.0.5) (2025-07-31)
 
 
