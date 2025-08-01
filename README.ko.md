@@ -25,6 +25,7 @@
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
   </a>
+  <img src="https://s2.loli.net/2025/08/01/29msh4TAULFgGkn.webp" alt="Messsage MCP Exsample">
 </div>
 
 ## 🚀 AI 사용 효율성을 높이고 더 많은 시간을 확보하세요
@@ -49,7 +50,7 @@ AI가 작업을 완료하기를 기다리는 동안 다른 업무를 동시에 �
 
 [![클릭_설치-Cursor](https://img.shields.io/badge/클릭_설치-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![클릭_설치-VS_Code](https://img.shields.io/badge/클릭_설치-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![클릭_설치-VS_Code_Insiders](https://img.shields.io/badge/클릭_설치-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> smithery.ai를 통해 Message MCP 클라우드 실행을 지원하며, Dify 등 SaaS 서비스를 지원하고 자동 인증 및 키 호스팅으로 유출 위험이 전혀 없습니다. [자세히 알아보기](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> smithery.ai를 통해 클라우드 설치를 지원하며(예: Dify 등 SaaS 서비스), 로컬에 원클릭 배포도 가능합니다. Message MCP는 실제로 smithery.ai 클라우드에서 실행되므로 현재 데스크톱 알림은 지원되지 않습니다. 전 과정에 걸쳐 종단간 암호화가 적용되어 데이터 보안을 보장합니다. [자세히 알아보기](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ 표준 설치
 
