@@ -25,6 +25,7 @@
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
   </a>
+  <img src="https://s2.loli.net/2025/08/01/29msh4TAULFgGkn.webp" alt="Messsage MCP Exsample">
 </div>
 
 ## 🚀 Boost AI efficiency and free up more time
@@ -49,7 +50,7 @@ When waiting for AI to complete tasks, do you wish you could handle other work s
 
 [![Click_Install-Cursor](https://img.shields.io/badge/Click_Install-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![Click_Install-VS_Code](https://img.shields.io/badge/Click_Install-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![Click_Install-VS_Code_Insiders](https://img.shields.io/badge/Click_Install-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> Enable Message MCP cloud execution through smithery.ai, supporting SaaS services like Dify, with automatic authentication and key hosting ensuring zero leakage risk. [Learn more](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> Supports cloud installation via smithery.ai (e.g., SaaS services like Dify) and offers one-click local deployment. Since the Message MCP actually runs on smithery.ai’s cloud, desktop notifications are not yet supported. End-to-end encryption is applied throughout to ensure data security. [Learn more](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ Standard Installation
 

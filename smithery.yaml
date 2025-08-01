@@ -1,4 +1,3 @@
-runtime: 'container'
 startCommand:
   type: 'stdio'
   configSchema:

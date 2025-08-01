@@ -25,6 +25,7 @@
   <a href="https://github.com/gimjin/message-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/gimjin/message-mcp" alt="MIT License">
   </a>
+  <img src="https://s2.loli.net/2025/08/01/29msh4TAULFgGkn.webp" alt="Messsage MCP Exsample">
 </div>
 
 ## 🚀 提升 AI 使用效率，释放更多时间
@@ -49,7 +50,7 @@
 
 [![点击安装-Cursor](https://img.shields.io/badge/点击安装-Cursor-171717)](https://cursor.com/install-mcp?name=message-mcp&config=eyJjb21tYW5kIjogIm5weCIsImFyZ3MiOiBbIm1lc3NhZ2UtbWNwQGxhdGVzdCJdfQ==) [![点击安装-VS_Code](https://img.shields.io/badge/点击安装-VS_Code-0098FF)](https://insiders.vscode.dev/redirect?url=vscode:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![点击安装-VS_Code_Insiders](https://img.shields.io/badge/点击安装-VS_Code_Insiders-24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?{%22name%22:%22message-mcp%22,%22command%22:%22npx%22,%22args%22:[%22message-mcp@latest%22]}) [![smithery.ai](https://smithery.ai/badge/@gimjin/message-mcp)](https://smithery.ai/server/@gimjin/message-mcp)
 
-> 通过 smithery.ai 实现 Message MCP 云端执行，支持 Dify 等 SaaS 服务，自动处理身份验证与密钥托管，确保零泄露风险。[了解更多](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
+> 通过 smithery.ai 支持云端安装（如 Dify 等 SaaS 服务），也提供本地一键部署。由于 Message MCP 实际运行于 smithery.ai 云端，暂不支持桌面通知。全程采用端到端加密，保障数据安全。[了解更多](https://smithery.ai/docs/getting_started/quickstart_connect#one-click-connect-to-smithery-servers)
 
 ### ⚙️ 标准安装
 
