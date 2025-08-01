@@ -27,6 +27,9 @@
   </a>
   <img src="https://s2.loli.net/2025/08/01/29msh4TAULFgGkn.webp" alt="Messsage MCP Exsample">
 </div>
+<a href="https://glama.ai/mcp/servers/@gimjin/message-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@gimjin/message-mcp/badge" alt="message-mcp MCP server" />
+</a>
 
 ## 🚀 Boost AI efficiency and free up more time
 
